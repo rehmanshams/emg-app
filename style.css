@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  /* padding-bottom: 100px; */
+}
+.first-container {
+  width: 100%;
+  /* max-width: 1440px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.second-container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.primary-button {
+    background-color: #00c29a;
+    border-radius: 8px;
+    padding: 20px 32px 20px 32px;
+    cursor: pointer;
+  }
+  .set-bg {
+    background-image: url(./images/buttom-section-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 820px;
+    width: 100%;
+    max-width: 1440px;
+  }
+/* .gradient-bg {
+  border-radius: 24px;
+  background: linear-gradient(180deg, #f0faf8 0%, #d9fcf8 100%);
+}
+.gradient-text {
+  background: linear-gradient(127deg, #00c49c 0%, #1e71a3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -1.6px;
+}
+
+.resource-started-bg {
+  background-image: url(./images/resourse-bottomtwo-sec-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+}
+
+.commonbg-second {
+  border-radius: 14px;
+  background-color: #ebf7ff;
+  width: 100%;
+  max-width: 534px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+} */
