@@ -9,20 +9,26 @@
     <title>EMG Homepage</title>
   </head>
   <body>
-    <div class="first-container mx-auto pb-44">
-      <div class="flex flex-col gap-[38px] justify-center items-center">
-        <div class="flex justify-between items-center w-full py-[38.8px] px-10">
-          <div>
-            <img src="./images/emg-logo.png" />
+    <div class="first-container mx-auto">
+      <div class="flex flex-col gap-[75px] justify-center items-center">
+        <div
+          class="flex justify-between items-center w-full max-w-[1200px] py-[38.8px]"
+        >
+          <div class="cursor-pointer">
+            <a href="./index.html">
+              <img src="./images/emg-logo.png" />
+            </a>
           </div>
           <div>
             <nav>
               <ul class="flex gap-6 font-medium">
-                <li class="cursor-pointer">How It Works</li>
-                <li class="cursor-pointer">Channels</li>
-                <a href="./resources.html">
-                  <li class="cursor-pointer">Resources</li>
+                <a href="./howitworks.html">
+                  <li class="cursor-pointer">How It Works</li>
                 </a>
+                <a href="./channels.html">
+                  <li class="cursor-pointer">Channels</li>
+                </a>
+                <li class="cursor-pointer">Resources</li>
                 <li class="cursor-pointer">Company</li>
                 <li class="cursor-pointer">Blog</li>
               </ul>
@@ -31,11 +37,23 @@
           <div class="flex gap-8 items-center">
             <p class="font-medium cursor-pointer">Contact Us</p>
             <button
-              class="uppercase primary-button text-[#FCFCFC] leading-normal flex"
+              class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
             >
               Get Started
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M9 18L15 12L9 6" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#FCFCFC"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </button>
           </div>
@@ -48,8 +66,9 @@
               <p
                 class="text-black text-[80px] leading-[80px] text-center font-bold w-full max-w-[952px]"
               >
-                Streaming advertising that
-                <span class="gradient-text">sells more cars</span>
+                Streaming advertising that sells
+                <span class="border-b-[3px] border-[#1E71A3]"> more </span>cars
+                <span class="text-[#1E71A3] rounded-full -ml-4"> . </span>
               </p>
               <div
                 class="flex flex-col items-center text-white text-base font-semibold gap-8"
@@ -62,7 +81,7 @@
                   absolute confidence.
                 </p>
                 <button
-                  class="bg-[#1E71A3] rounded-[14px] py-5 px-8 flex gap-1 items-center"
+                  class="bg-[#1E71A3] h-[52px] rounded-[14px] py-5 px-8 flex gap-1 items-center"
                 >
                   Learn More
                   <svg
@@ -107,42 +126,551 @@
               </div>
             </div>
           </div>
-          <div class="first-container flex justify-center items-center set-bg">
-            <div class="flex flex-col gap-8">
-              <div class="flex flex-col gap-[14px]">
-                <div class="flex gap-[14px] items-center">
-                  <hr class="border border-[#1E71A3] w-8 h-px" />
-                  <p class="text-lg font-semibold text-[#1E71A3]">
-                    Measurement
+          <div class="flex flex-col gap-20">
+            <div
+              class="first-container flex justify-center items-center set-bg"
+            >
+              <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-[14px]">
+                  <div class="flex gap-[14px] items-center">
+                    <hr class="border border-[#1E71A3] w-8 h-px" />
+                    <p class="text-lg font-semibold text-[#1E71A3]">
+                      Measurement
+                    </p>
+                  </div>
+                  <p class="text-black text-[38px] font-bold w-[800px]">
+                    EMG Measure Walk-Ins To Your Dealership And Your Competitors
                   </p>
                 </div>
-                <p class="text-black text-[38px] font-semibold w-[800px]">
-                  EMG Measure Walk-Ins To Your Dealership And Your Competitors
-                </p>
-              </div>
-              <div>
-                <div class="flex flex-col gap-6 w-full max-w-[483px]">
-                  <p>
-                    At EMG, our answer is simple: lift in dealer walk-ins and
-                    website visits. That’s why we created an attribution and
-                    measurement solution built for streaming advertising, where
-                    there are no clicks and cookies don’t exist.
-                  </p>
-                  <p>
-                    We use those attributed offline and online data points as a
-                    reliable optimization feedback loop that improves the
-                    performance of your streaming campaigns, and to create next
-                    generation reporting and analytics.
-                  </p>
-                  <div class="flex flex-col gap-14">
+                <div class="flex gap-7">
+                  <div class="flex flex-col gap-6 w-full max-w-[483px]">
                     <p>
-                      How do you measure the impact of your CTV and Audio
-                      advertising? We hear a lot of different answers ranging
-                      from CPM and VCR to channel lineup and impression counts.
+                      At EMG, our answer is simple: lift in dealer walk-ins and
+                      website visits. That’s why we created an attribution and
+                      measurement solution built for streaming advertising,
+                      where there are no clicks and cookies don’t exist.
                     </p>
-                    <button>
+                    <p>
+                      We use those attributed offline and online data points as
+                      a reliable optimization feedback loop that improves the
+                      performance of your streaming campaigns, and to create
+                      next generation reporting and analytics.
+                    </p>
+                    <div class="flex flex-col gap-14">
+                      <p>
+                        How do you measure the impact of your CTV and Audio
+                        advertising? We hear a lot of different answers ranging
+                        from CPM and VCR to channel lineup and impression
+                        counts.
+                      </p>
+                      <button
+                        class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
+                      >
+                        Get Started
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#FCFCFC"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <img src="./images/tv-image.png" />
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col gap-[100px]">
+              <div
+                class="bg-section second-container p-10 rounded-3xl flex gap-[90px] justify-center"
+              >
+                <div class="text-center w-full max-w-[236px]">
+                  <p
+                    class="text-[#FCFCFC] text-[42px] font-medium leading-[72px] tracking-[-0.84px]"
+                  >
+                    50,000,000
+                  </p>
+                  <p class="font-medium leading-[30px] text-[#FCFCFC] text-2xl">
+                    Tracked Dealerships Walk-ins
+                  </p>
+                </div>
+                <div class="text-center w-full max-w-[305px]">
+                  <p
+                    class="text-[#FCFCFC] text-[42px] font-medium leading-[72px] tracking-[-0.84px]"
+                  >
+                    50,000,000
+                  </p>
+                  <p class="font-medium leading-[30px] text-[#FCFCFC] text-2xl">
+                    Auto-Intender Households Reached
+                  </p>
+                </div>
 
-                    </button>
+                <div class="text-center w-full max-w-[273px]">
+                  <p
+                    class="text-[#FCFCFC] text-[42px] font-medium leading-[72px] tracking-[-0.84px]"
+                  >
+                    8000
+                  </p>
+                  <p class="font-medium leading-[30px] text-[#FCFCFC] text-2xl">
+                    Tier 2 and 3 Campaings Managed
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-[150px]">
+                <div class="flex flex-col second-container gap-8">
+                  <div class="flex flex-col gap-[14px]">
+                    <div class="flex gap-[14px] items-center">
+                      <hr class="border border-[#1E71A3] w-8 h-px" />
+                      <p class="text-lg font-semibold text-[#1E71A3]">
+                        How It Works
+                      </p>
+                    </div>
+                    <p class="text-black text-[38px] font-semibold w-[800px]">
+                      EMG is making streaming advertising impactful for
+                      Automotive Marketers
+                    </p>
+                  </div>
+                  <div class="flex flex-col gap-[54px]">
+                    <div class="flex flex-col gap-6 w-full max-w-[483px]">
+                      <p class="text-base text-[#212529] font-medium leading-6">
+                        Learn how to increase dealership walk-ins and website
+                        visits using our end-to-end solution built for the
+                        automotive industry
+                      </p>
+                      <button
+                        class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
+                      >
+                        Get Started
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M9 18L15 12L9 6"
+                            stroke="#FCFCFC"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                    <div>
+                      <div
+                        class="bg-[#1770A4] second-container h-[267px] relative rounded-[32px]"
+                      >
+                        <div class="absolute -top-[340px] right-0">
+                          <img
+                            class=""
+                            src="./images/desktop-mobile-image.png"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="bg-[#F2F7FA] first-container flex justify-center py-[60px]"
+                >
+                  <div class="flex flex-col gap-8">
+                    <p class="text-black text-[38px] font-bold leading-normal">
+                      Recent highlights
+                    </p>
+                    <div class="flex gap-[30px]">
+                      <div
+                        class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                      >
+                        <p class="text-white font-semibold text-xl">
+                          Cash App Pay available in US
+                        </p>
+                        <div class="flex flex-col gap-[70px]">
+                          <div class="flex flex-col gap-2">
+                            <p
+                              class="text-sm text-[#FCFCFC] font-light leading-5"
+                            >
+                              Jun 7 • 2023
+                            </p>
+                            <p
+                              class="text-white text-base font-normal leading-6"
+                            >
+                              Businesses in the US can now reach new customers
+                              with Cash App Pay. Allow customers to pay with the
+                              wallet that's number one in both app stores.
+                            </p>
+                          </div>
+                          <div class="flex gap-2 items-center">
+                            <p
+                              class="text-white text-base leading-normal font-bold"
+                            >
+                              Learn More
+                            </p>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M9 18L15 12L9 6"
+                                stroke="#FCFCFC"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                      >
+                        <p class="text-white font-semibold text-xl">
+                          Introducing Stripe Reader S700
+                        </p>
+                        <div class="flex flex-col gap-[70px]">
+                          <div class="flex flex-col gap-2">
+                            <p
+                              class="text-sm text-[#FCFCFC] font-light leading-5"
+                            >
+                              May 2 • 2023
+                            </p>
+                            <p
+                              class="text-white text-base font-normal leading-6"
+                            >
+                              Build custom experiences for interactions from
+                              ordering to loyalty management-or run your custom
+                              POS on an all-in- one device.
+                            </p>
+                          </div>
+                          <div class="flex gap-2 items-center">
+                            <p
+                              class="text-white text-base leading-normal font-bold"
+                            >
+                              Learn More
+                            </p>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M9 18L15 12L9 6"
+                                stroke="#FCFCFC"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                      >
+                        <p class="text-white font-semibold text-xl">
+                          2024 Honda CR-V Adds $37,645 Hybrid-Only Sport-L
+                        </p>
+                        <div class="flex flex-col gap-[70px]">
+                          <div class="flex flex-col gap-2">
+                            <p
+                              class="text-sm text-[#FCFCFC] font-light leading-5"
+                            >
+                              Jun 7 • 2023
+                            </p>
+                            <p
+                              class="text-white text-base font-normal leading-6"
+                            >
+                              Businesses in the US can now reach new customers
+                              with Cash App Pay. Allow customers to pay with the
+                              wallet that's number one in both app stores.
+                            </p>
+                          </div>
+                          <div class="flex gap-2 items-center">
+                            <p
+                              class="text-white text-base leading-normal font-bold"
+                            >
+                              Learn More
+                            </p>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M9 18L15 12L9 6"
+                                stroke="#FCFCFC"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                      >
+                        <p class="text-white font-semibold text-xl">
+                          1963 Chevy Impala Z11 Lightweight Is Our BaT Pick
+                        </p>
+                        <div class="flex flex-col gap-[70px]">
+                          <div class="flex flex-col gap-2">
+                            <p
+                              class="text-sm text-[#FCFCFC] font-light leading-5"
+                            >
+                              Jun 7 • 2023
+                            </p>
+                            <p
+                              class="text-white text-base font-normal leading-6"
+                            >
+                              Businesses in the US can now reach new customers
+                              with Cash App Pay. Allow customers to pay with the
+                              wallet that's number one in both app stores.
+                            </p>
+                          </div>
+                          <div class="flex gap-2 items-center">
+                            <p
+                              class="text-white text-base leading-normal font-bold"
+                            >
+                              Learn More
+                            </p>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M9 18L15 12L9 6"
+                                stroke="#FCFCFC"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-8 second-container items-center text-center"
+            >
+              <p class="text-black text-[38px] font-bold leadign-normal">
+                Ready to Get Started?
+              </p>
+              <div class="flex flex-col items-center gap-[42px]">
+                <p
+                  class="text-[#212529] text-base font-normal leading-6 w-[675px]"
+                >
+                  Drive better performance for your streaming campaigns with our
+                  comprehensive solution.
+                </p>
+                <button
+                  class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
+                >
+                  Get Started
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M9 18L15 12L9 6"
+                      stroke="#FCFCFC"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div
+              class="p-[42px] bg-[#F2F7FA] flex justify-center first-container"
+            >
+              <div class="flex flex-col gap-[55px]">
+                <div class="flex items-center gap-[125px]">
+                  <div class="flex flex-col gap-5">
+                    <img
+                      class="h-12 w-[118px]"
+                      src="./images/footer-logo.png"
+                    />
+                    <div class="flex flex-col gap-6">
+                      <p
+                        class="text-neutral-800 text-lg leading-normal font-medium"
+                      >
+                        Contact
+                      </p>
+                      <p
+                        class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%]"
+                      >
+                        Phone: (949) 669-5724
+                      </p>
+                      <p
+                        class="cursor-pointer w-[163px] text-neutral-600 text-sm font-normal leading-[137.5%]"
+                      >
+                        Address: 400 Spectrum Center Dr Suite 19-199, Irvine, CA
+                        92618
+                      </p>
+                      <div class="flex gap-6 items-center">
+                        <img
+                          class="cursor-pointer"
+                          src="./images/facebook-logo.png"
+                        />
+                        <img
+                          class="cursor-pointer"
+                          src="./images/instagram-logo.png"
+                        />
+                        <img
+                          class="cursor-pointer"
+                          src="./images/twitter-logo.png"
+                        />
+                        <img
+                          class="cursor-pointer"
+                          src="./images/youtube-logo.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-[90px] mt-16">
+                    <div class="flex flex-col gap-6">
+                      <p
+                        class="text-neutral-800 text-lg leading-normal font-medium"
+                      >
+                        How It Works
+                      </p>
+                      <p
+                        class="cursor-pointer text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        Planing
+                      </p>
+                      <p
+                        class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        Audience
+                      </p>
+                      <p
+                        class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        Measurement
+                      </p>
+                      <p
+                        class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        Reporting
+                      </p>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                      <p
+                        class="text-neutral-800 text-lg leading-normal font-medium"
+                      >
+                        Chanels
+                      </p>
+                      <a href="./ctv.html">
+                        <p
+                          class="text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                        >
+                          CTV
+                        </p>
+                      </a>
+
+                      <a href="./audio.html">
+                        <p
+                          class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                        >
+                          Audio
+                        </p>
+                      </a>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                      <p
+                        class="text-neutral-800 text-lg leading-normal font-medium"
+                      >
+                        Resource
+                      </p>
+                      <p
+                        class="text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        Case Studies
+                      </p>
+                      <p
+                        class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        Creative Hub
+                      </p>
+                      <p
+                        class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        Gloassary
+                      </p>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                      <p
+                        class="text-neutral-800 text-lg leading-normal font-medium"
+                      >
+                        Company
+                      </p>
+                      <p
+                        class="text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        About
+                      </p>
+                      <p
+                        class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        Partners
+                      </p>
+                      <p
+                        class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        Careers
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-3">
+                  <hr class="border border-[#D6EFFF]" />
+                  <div class="flex justify-between">
+                    <p class="text-neutral-600 text-xs font-normal">
+                      Copyright © 2022. All Right Reserved
+                    </p>
+                    <div class="flex gap-8 items-center">
+                      <p
+                        class="cursor-pointer text-[#465364] text-xs font-normal"
+                      >
+                        Creative Specifications
+                      </p>
+                      <p
+                        class="cursor-pointer text-[#465364] text-xs font-normal"
+                      >
+                        Privacy Policy
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
