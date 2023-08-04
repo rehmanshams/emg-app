@@ -4,12 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            borderRadius: {
+              "1xl": "14px",
+            },
+          },
+        },
+      };
+    </script>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="./images/title-logo.png" type="image/icon type" />
     <title>EMG CTV</title>
   </head>
   <body>
-    <div class="first-container mx-auto">
+    <div class="w-full mx-auto">
       <div class="flex flex-col gap-[83px] mx-auto justify-center items-center">
         <div
           class="flex justify-between items-center w-full max-w-[1200px] py-[38.8px]"
@@ -22,8 +33,8 @@
           <div>
             <nav>
               <ul class="flex gap-6 font-medium">
-                                <a href="./howitworks.html">
-                <li class="cursor-pointer">How It Works</li>
+                <a href="./howitworks.html">
+                  <li class="cursor-pointer">How It Works</li>
                 </a>
                 <a href="./channels.html">
                   <li class="cursor-pointer">Channels</li>
@@ -58,8 +69,8 @@
             </button>
           </div>
         </div>
-        <div class="w-full max-w-[1440px] flex flex-col gap-[150px]">
-          <div class="ml-auto flex justify-start gap-[87px]">
+        <div class="w-full flex flex-col gap-[150px]">
+          <div class="second-container flex gap-[87px]">
             <div class="flex flex-col gap-[14px]">
               <div class="flex gap-[14px] items-center">
                 <hr class="border border-[#1E71A3] w-8 h-px" />
@@ -78,9 +89,11 @@
                 </p>
               </div>
             </div>
-            <div class="w-full">
-              <img src="./images/ctv-car-image.png" />
-            </div>
+            <img
+              src="./images/ctv-car-image.png"
+              width="720px"
+              height="420px"
+            />
           </div>
           <div class="flex second-container gap-[39px]">
             <img src="./images/ctv-connecttv-image.png" />
@@ -116,7 +129,7 @@
                 linear TV by re-engaging them with CTV ads. PMA?
               </p>
               <button
-                class="text-[#FCFCFC] text-base font-bold bg-[#1E71A3] flex gap-1 h-[52px] text-center px-8 w-[376px] rounded-[14px] justify-center items-center"
+                class="text-[#FCFCFC] transition-all ease-in-out duration-300 hover:opacity-90 text-base font-bold bg-[#1E71A3] flex gap-1 h-[52px] text-center px-8 w-[376px] rounded-1xl justify-center items-center"
               >
                 Reach Auto-Intenders with CTV Ads
                 <svg
@@ -234,509 +247,288 @@
               <img src="./images/gmcfour-ctv.png" />
               <img src="./images/jaguat-ctv.png" />
             </div>
-
           </div>
-          <div class="ml-auto flex justify-start items-center gap-[65px]">
-            <p class="text-black font-bold text-[38px] leading-normal">
-              The advantages of CTV with EMG
-            </p>
+          <div class="second-container">
             <div
-              class="w-full bg-[#F2F7FA] flex flex-col gap-8 rounded-l-[50px] pt-[55.5px] pl-12 pb-[66.5px]"
+              class="min-w-[1319px] flex justify-end items-center gap-[65px]"
             >
-              <div class="flex gap-[47px]">
-                <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
-                  01
-                </p>
-                <div class="flex flex-col gap-3 w-[504px]">
-                  <p
-                    class="text-neutral-800 font-bold leading-10 text-[31.5px]"
-                  >
-                    Performance
+              <p class="text-black font-bold text-[38px] leading-normal">
+                The advantages of CTV with EMG
+              </p>
+              <div
+                class="w-full bg-[#F2F7FA] flex flex-col gap-8 rounded-l-[50px] pt-[55.5px] pl-12 pb-[66.5px]"
+              >
+                <div class="flex gap-[47px]">
+                  <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
+                    01
                   </p>
-                  <p class="text-[#212529] text-base font-normal leading-6">
-                    Through unparalleled efficiency, reach confirmed
-                    auto-intenders for a fraction of the cost
-                  </p>
+                  <div class="flex flex-col gap-3 w-[504px]">
+                    <p
+                      class="text-neutral-800 font-bold leading-10 text-[31.5px]"
+                    >
+                      Performance
+                    </p>
+                    <p class="text-[#212529] text-base font-normal leading-6">
+                      Through unparalleled efficiency, reach confirmed
+                      auto-intenders for a fraction of the cost
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="flex gap-[47px]">
-                <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
-                  02
-                </p>
-                <div class="flex flex-col gap-3 w-[504px]">
-                  <p
-                    class="text-neutral-800 font-bold leading-10 text-[31.5px]"
-                  >
-                    Precision Targeting
+                <div class="flex gap-[47px]">
+                  <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
+                    02
                   </p>
-                  <p class="text-[#212529] text-base font-normal leading-6">
-                    Go way beyond demographic data and leverage our curated
-                    auto-intender audiences based on 55M+ dealership walk-ins
-                    over a 5 year period
-                  </p>
+                  <div class="flex flex-col gap-3 w-[504px]">
+                    <p
+                      class="text-neutral-800 font-bold leading-10 text-[31.5px]"
+                    >
+                      Precision Targeting
+                    </p>
+                    <p class="text-[#212529] text-base font-normal leading-6">
+                      Go way beyond demographic data and leverage our curated
+                      auto-intender audiences based on 55M+ dealership walk-ins
+                      over a 5 year period
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="flex gap-[47px]">
-                <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
-                  03
-                </p>
-                <div class="flex flex-col gap-3 w-[504px]">
-                  <p
-                    class="text-neutral-800 font-bold leading-10 text-[31.5px]"
-                  >
-                    Premium Inventory
+                <div class="flex gap-[47px]">
+                  <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
+                    03
                   </p>
-                  <p class="text-[#212529] text-base font-normal leading-6">
-                    Run ads on every ad supported streaming service including
-                    sports and live events. Our inventory is sourced directly
-                    from programmers and publishers, putting more media to work.
-                  </p>
+                  <div class="flex flex-col gap-3 w-[504px]">
+                    <p
+                      class="text-neutral-800 font-bold leading-10 text-[31.5px]"
+                    >
+                      Premium Inventory
+                    </p>
+                    <p class="text-[#212529] text-base font-normal leading-6">
+                      Run ads on every ad supported streaming service including
+                      sports and live events. Our inventory is sourced directly
+                      from programmers and publishers, putting more media to
+                      work.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="flex gap-[47px]">
-                <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
-                  04
-                </p>
-                <div class="flex flex-col gap-3 w-[504px]">
-                  <p
-                    class="text-neutral-800 font-bold leading-10 text-[31.5px]"
-                  >
-                    Measurement
+                <div class="flex gap-[47px]">
+                  <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
+                    04
                   </p>
-                  <p class="text-[#212529] text-base font-normal leading-6">
-                    Measure offline and online metrics including dealership
-                    walk-ins, market share, and VDP views.
-                  </p>
+                  <div class="flex flex-col gap-3 w-[504px]">
+                    <p
+                      class="text-neutral-800 font-bold leading-10 text-[31.5px]"
+                    >
+                      Measurement
+                    </p>
+                    <p class="text-[#212529] text-base font-normal leading-6">
+                      Measure offline and online metrics including dealership
+                      walk-ins, market share, and VDP views.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="flex flex-col gap-[100px]">
-            <div class="car-name-logo-bg flex justify-center items-center">
-              <div class="flex flex-col gap-20 items-center">
-                <p class="text-black text-[38px] font-bold leading-normal">
-                  Our connected TV Partners
-                </p>
-                <img src="./images/name-logo.png" />
-              </div>
-            </div>
             <div
-              class="bg-[#F2F7FA] first-container flex justify-center py-[60px]"
+              class="w-full mx-auto flex flex-col gap-[100px]"
             >
-              <div class="flex flex-col gap-8">
-                <p class="text-black text-[38px] font-bold leading-normal">
-                  Recent highlights
-                </p>
-                <div class="flex gap-[30px]">
-                  <div
-                    class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
-                  >
-                    <p class="text-white font-semibold text-xl">
-                      Cash App Pay available in US
-                    </p>
-                    <div class="flex flex-col gap-[70px]">
-                      <div class="flex flex-col gap-2">
-                        <p class="text-sm text-[#FCFCFC] font-light leading-5">
-                          Jun 7 • 2023
-                        </p>
-                        <p class="text-white text-base font-normal leading-6">
-                          Businesses in the US can now reach new customers with
-                          Cash App Pay. Allow customers to pay with the wallet
-                          that's number one in both app stores.
-                        </p>
-                      </div>
-                      <div class="flex gap-2 items-center">
-                        <p
-                          class="text-white text-base leading-normal font-bold"
-                        >
-                          Learn More
-                        </p>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            d="M9 18L15 12L9 6"
-                            stroke="#FCFCFC"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
-                  >
-                    <p class="text-white font-semibold text-xl">
-                      Introducing Stripe Reader S700
-                    </p>
-                    <div class="flex flex-col gap-[70px]">
-                      <div class="flex flex-col gap-2">
-                        <p class="text-sm text-[#FCFCFC] font-light leading-5">
-                          May 2 • 2023
-                        </p>
-                        <p class="text-white text-base font-normal leading-6">
-                          Build custom experiences for interactions from
-                          ordering to loyalty management-or run your custom POS
-                          on an all-in- one device.
-                        </p>
-                      </div>
-                      <div class="flex gap-2 items-center">
-                        <p
-                          class="text-white text-base leading-normal font-bold"
-                        >
-                          Learn More
-                        </p>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            d="M9 18L15 12L9 6"
-                            stroke="#FCFCFC"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+              <div class="car-name-logo-bg flex justify-center items-center">
+                <div class="flex flex-col gap-20 items-center">
+                  <p class="text-black text-[38px] font-bold leading-normal">
+                    Our connected TV Partners
+                  </p>
+                  <img src="./images/name-logo.png" />
+                </div>
+              </div>
+              <div
+                class="bg-[#F2F7FA] first-container flex justify-center py-[60px]"
+              >
+                <div class="flex flex-col gap-8">
+                  <p class="text-black text-[38px] font-bold leading-normal">
+                    Recent highlights
+                  </p>
+                  <div class="flex gap-[30px]">
+                    <div
+                      class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                    >
+                      <p class="text-white font-semibold text-xl">
+                        Cash App Pay available in US
+                      </p>
+                      <div class="flex flex-col gap-[70px]">
+                        <div class="flex flex-col gap-2">
+                          <p
+                            class="text-sm text-[#FCFCFC] font-light leading-5"
+                          >
+                            Jun 7 • 2023
+                          </p>
+                          <p class="text-white text-base font-normal leading-6">
+                            Businesses in the US can now reach new customers
+                            with Cash App Pay. Allow customers to pay with the
+                            wallet that's number one in both app stores.
+                          </p>
+                        </div>
+                        <div class="flex gap-2 items-center cursor-pointer">
+                          <p
+                            class="text-white text-base leading-normal font-bold"
+                          >
+                            Learn More
+                          </p>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M9 18L15 12L9 6"
+                              stroke="#FCFCFC"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
-                  >
-                    <p class="text-white font-semibold text-xl">
-                      2024 Honda CR-V Adds $37,645 Hybrid-Only Sport-L
-                    </p>
-                    <div class="flex flex-col gap-[70px]">
-                      <div class="flex flex-col gap-2">
-                        <p class="text-sm text-[#FCFCFC] font-light leading-5">
-                          Jun 7 • 2023
-                        </p>
-                        <p class="text-white text-base font-normal leading-6">
-                          Businesses in the US can now reach new customers with
-                          Cash App Pay. Allow customers to pay with the wallet
-                          that's number one in both app stores.
-                        </p>
-                      </div>
-                      <div class="flex gap-2 items-center">
-                        <p
-                          class="text-white text-base leading-normal font-bold"
-                        >
-                          Learn More
-                        </p>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            d="M9 18L15 12L9 6"
-                            stroke="#FCFCFC"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+                    <div
+                      class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                    >
+                      <p class="text-white font-semibold text-xl">
+                        Introducing Stripe Reader S700
+                      </p>
+                      <div class="flex flex-col gap-[70px]">
+                        <div class="flex flex-col gap-2">
+                          <p
+                            class="text-sm text-[#FCFCFC] font-light leading-5"
+                          >
+                            May 2 • 2023
+                          </p>
+                          <p class="text-white text-base font-normal leading-6">
+                            Build custom experiences for interactions from
+                            ordering to loyalty management-or run your custom
+                            POS on an all-in- one device.
+                          </p>
+                        </div>
+                        <div class="flex gap-2 items-center cursor-pointer">
+                          <p
+                            class="text-white text-base leading-normal font-bold"
+                          >
+                            Learn More
+                          </p>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M9 18L15 12L9 6"
+                              stroke="#FCFCFC"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
-                  >
-                    <p class="text-white font-semibold text-xl">
-                      1963 Chevy Impala Z11 Lightweight Is Our BaT Pick
-                    </p>
-                    <div class="flex flex-col gap-[70px]">
-                      <div class="flex flex-col gap-2">
-                        <p class="text-sm text-[#FCFCFC] font-light leading-5">
-                          Jun 7 • 2023
-                        </p>
-                        <p class="text-white text-base font-normal leading-6">
-                          Businesses in the US can now reach new customers with
-                          Cash App Pay. Allow customers to pay with the wallet
-                          that's number one in both app stores.
-                        </p>
+                    <div
+                      class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                    >
+                      <p class="text-white font-semibold text-xl">
+                        2024 Honda CR-V Adds $37,645 Hybrid-Only Sport-L
+                      </p>
+                      <div class="flex flex-col gap-[70px]">
+                        <div class="flex flex-col gap-2">
+                          <p
+                            class="text-sm text-[#FCFCFC] font-light leading-5"
+                          >
+                            Jun 7 • 2023
+                          </p>
+                          <p class="text-white text-base font-normal leading-6">
+                            Businesses in the US can now reach new customers
+                            with Cash App Pay. Allow customers to pay with the
+                            wallet that's number one in both app stores.
+                          </p>
+                        </div>
+                        <div class="flex gap-2 items-center cursor-pointer">
+                          <p
+                            class="text-white text-base leading-normal font-bold"
+                          >
+                            Learn More
+                          </p>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M9 18L15 12L9 6"
+                              stroke="#FCFCFC"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
                       </div>
-                      <div class="flex gap-2 items-center">
-                        <p
-                          class="text-white text-base leading-normal font-bold"
-                        >
-                          Learn More
-                        </p>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                        >
-                          <path
-                            d="M9 18L15 12L9 6"
-                            stroke="#FCFCFC"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+                    </div>
+                    <div
+                      class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                    >
+                      <p class="text-white font-semibold text-xl">
+                        1963 Chevy Impala Z11 Lightweight Is Our BaT Pick
+                      </p>
+                      <div class="flex flex-col gap-[70px]">
+                        <div class="flex flex-col gap-2">
+                          <p
+                            class="text-sm text-[#FCFCFC] font-light leading-5"
+                          >
+                            Jun 7 • 2023
+                          </p>
+                          <p class="text-white text-base font-normal leading-6">
+                            Businesses in the US can now reach new customers
+                            with Cash App Pay. Allow customers to pay with the
+                            wallet that's number one in both app stores.
+                          </p>
+                        </div>
+                        <div class="flex gap-2 items-center cursor-pointer">
+                          <p
+                            class="text-white text-base leading-normal font-bold"
+                          >
+                            Learn More
+                          </p>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M9 18L15 12L9 6"
+                              stroke="#FCFCFC"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="second-container flex flex-col gap-[62px]">
-              <p class="text-black text-[38px] font-bold leading-normal">
-                Frequently Asked Question
-              </p>
-              <div class="flex flex-col gap-8">
-                <div
-                  class="flex justify-between border-b border-[#DCE6FF] pb-6"
-                >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    What is MNTN Performance TV advertising?
-                  </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12 4V20"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M20 12H4"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-between border-b border-[#DCE6FF] pb-6"
-                >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    How does MNTN Performance TV differ from Traditional TV
-                    adversing?
-                  </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12 4V20"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M20 12H4"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-between border-b border-[#DCE6FF] pb-6"
-                >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    On what networks and devices can i advertise using MNTN
-                    Performance TV?
-                  </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12 4V20"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M20 12H4"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-between border-b border-[#DCE6FF] pb-6"
-                >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    What does it take to get started with MNTN Performance TV
-                    Advertising?
-                  </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12 4V20"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M20 12H4"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-between border-b border-[#DCE6FF] pb-6"
-                >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    What does MNTN Performance TV compare to Paid Search
-                    Advertising?
-                  </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12 4V20"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M20 12H4"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-between border-b border-[#DCE6FF] pb-6"
-                >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    Can i use my existing video assets for MNTN Performance TV
-                    Advertising?
-                  </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12 4V20"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M20 12H4"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-between border-b border-[#DCE6FF] pb-6"
-                >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    What is OTT Advertising?
-                  </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12 4V20"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M20 12H4"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <div
-                  class="flex justify-between border-b border-[#DCE6FF] pb-6"
-                >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    I’d like to learn more about Connected TV advertising in
-                    general, can you tell me more?
-                  </p>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M12 4V20"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M20 12H4"
-                      stroke="#0A2463"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
+              <div class="second-container flex flex-col gap-[62px]">
+                <p class="text-black text-[38px] font-bold leading-normal">
+                  Frequently Asked Question
+                </p>
+                <div id="myContent" class="flex flex-col gap-8">
+                  <!-- get the faq data -->
                 </div>
               </div>
             </div>
@@ -829,7 +621,7 @@
                           CTV
                         </p>
                       </a>
-                       <a href="./audio.html">
+                      <a href="./audio.html">
                         <p
                           class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
                         >
@@ -909,5 +701,7 @@
         </div>
       </div>
     </div>
+    <script src="./ctv.js"></script>
+
   </body>
 </html>

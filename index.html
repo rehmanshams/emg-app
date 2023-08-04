@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            borderRadius: {
+              "1xl": "14px",
+            },
+          },
+        },
+      };
+    </script>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="./images/title-logo.png" type="image/icon type" />
     <title>EMG Homepage</title>
@@ -81,7 +92,7 @@
                   absolute confidence.
                 </p>
                 <button
-                  class="bg-[#1E71A3] h-[52px] rounded-[14px] py-5 px-8 flex gap-1 items-center"
+                  class="bg-[#1E71A3] h-[52px] rounded-1xl py-5 px-8 flex gap-1 items-center"
                 >
                   Learn More
                   <svg
@@ -185,7 +196,24 @@
                       </button>
                     </div>
                   </div>
-                  <img src="./images/tv-image.png" />
+                  <div class="relative flex justify-center">
+                    <div class="video-container">
+                      <img src="./images/tv-image.png" />
+                      <video id="custom-video" width="670" height="430">
+                        <source src="./video/video.mp4" type="video/ogg" />
+                        Video is Loading.
+                      </video>
+                      <div class="video-bg">
+                        <button
+                          id="play-pause-button"
+                          class="absolute w-12 h-12 top-[45%] right-[47%]"
+                          onclick="togglePlayPause()"
+                        >
+                          <img id="f" src="./images/player_icon.png" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -290,7 +318,7 @@
                     </p>
                     <div class="flex gap-[30px]">
                       <div
-                        class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                        class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                       >
                         <p class="text-white font-semibold text-xl">
                           Cash App Pay available in US
@@ -310,7 +338,7 @@
                               wallet that's number one in both app stores.
                             </p>
                           </div>
-                          <div class="flex gap-2 items-center">
+                          <div class="flex gap-2 items-center cursor-pointer">
                             <p
                               class="text-white text-base leading-normal font-bold"
                             >
@@ -335,7 +363,7 @@
                         </div>
                       </div>
                       <div
-                        class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                        class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                       >
                         <p class="text-white font-semibold text-xl">
                           Introducing Stripe Reader S700
@@ -355,7 +383,7 @@
                               POS on an all-in- one device.
                             </p>
                           </div>
-                          <div class="flex gap-2 items-center">
+                          <div class="flex gap-2 items-center cursor-pointer">
                             <p
                               class="text-white text-base leading-normal font-bold"
                             >
@@ -380,7 +408,7 @@
                         </div>
                       </div>
                       <div
-                        class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                        class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                       >
                         <p class="text-white font-semibold text-xl">
                           2024 Honda CR-V Adds $37,645 Hybrid-Only Sport-L
@@ -400,7 +428,7 @@
                               wallet that's number one in both app stores.
                             </p>
                           </div>
-                          <div class="flex gap-2 items-center">
+                          <div class="flex gap-2 items-center cursor-pointer">
                             <p
                               class="text-white text-base leading-normal font-bold"
                             >
@@ -425,7 +453,7 @@
                         </div>
                       </div>
                       <div
-                        class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                        class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                       >
                         <p class="text-white font-semibold text-xl">
                           1963 Chevy Impala Z11 Lightweight Is Our BaT Pick
@@ -445,7 +473,7 @@
                               wallet that's number one in both app stores.
                             </p>
                           </div>
-                          <div class="flex gap-2 items-center">
+                          <div class="flex gap-2 items-center cursor-pointer">
                             <p
                               class="text-white text-base leading-normal font-bold"
                             >
@@ -671,6 +699,7 @@
                         Privacy Policy
                       </p>
                     </div>
+                    <div id="imported-content"></div>
                   </div>
                 </div>
               </div>
@@ -679,5 +708,6 @@
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

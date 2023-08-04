@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            borderRadius: {
+              "1xl": "14px",
+            },
+          },
+        },
+      };
+    </script>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="./images/title-logo.png" type="image/icon type" />
     <title>EMG Channel's</title>
@@ -11,7 +22,9 @@
   <body>
     <div class="first-container mx-auto">
       <div class="flex flex-col gap-[83px] justify-center items-center">
-        <div class="flex justify-between items-center w-full  max-w-[1200px] py-[38.8px] ">
+        <div
+          class="flex justify-between items-center w-full max-w-[1200px] py-[38.8px]"
+        >
           <div class="cursor-pointer">
             <a href="./index.html">
               <img src="./images/emg-logo.png" />
@@ -20,8 +33,8 @@
           <div>
             <nav>
               <ul class="flex gap-6 font-medium">
-                                <a href="./howitworks.html">
-                <li class="cursor-pointer">How It Works</li>
+                <a href="./howitworks.html">
+                  <li class="cursor-pointer">How It Works</li>
                 </a>
                 <a href="./channels.html">
                   <li class="cursor-pointer">Channels</li>
@@ -68,12 +81,12 @@
               </p>
               <div class="flex gap-6">
                 <button
-                  class="bg-[#1E71A3] rounded-[14px] px-8 h-[52px] text-[#FCFCFC] text-base font-bold leading-normal w-[180px]"
+                  class="bg-[#1E71A3] transition-all ease-in-out duration-300 hover:opacity-90 rounded-1xl px-8 h-[52px] text-[#FCFCFC] text-base font-bold leading-normal w-[180px]"
                 >
                   CTV
                 </button>
                 <button
-                  class="bg-[#1E71A3] rounded-[14px] px-8 h-[52px] text-[#FCFCFC] text-base font-bold leading-normal w-[180px]"
+                  class="bg-[#1E71A3] transition-all ease-in-out duration-300 hover:opacity-90 rounded-1xl px-8 h-[52px] text-[#FCFCFC] text-base font-bold leading-normal w-[180px]"
                 >
                   Audio
                 </button>
@@ -94,7 +107,7 @@
                       must-have for dealerships to reach auto-intenders.
                     </p>
                     <button
-                      class="bg-[#1E71A3] rounded-[14px] px-8 h-[52px] text-[#FCFCFC] text-base font-bold leading-normal w-[181px] flex gap-1 items-center"
+                      class="bg-[#1E71A3] transition-all ease-in-out duration-300 hover:opacity-90 rounded-1xl px-8 h-[52px] text-[#FCFCFC] text-base font-bold leading-normal w-[181px] flex gap-1 items-center"
                     >
                       Learn More
                       <svg
@@ -133,7 +146,7 @@
                       whenever they are streaming music, news, or podcasts.
                     </p>
                     <button
-                      class="bg-[#1E71A3] rounded-[14px] px-8 h-[52px] text-[#FCFCFC] text-base font-bold leading-normal w-[181px] flex gap-1 items-center"
+                      class="bg-[#1E71A3] transition-all ease-in-out duration-300 hover:opacity-90 rounded-1xl px-8 h-[52px] text-[#FCFCFC] text-base font-bold leading-normal w-[181px] flex gap-1 items-center"
                     >
                       Learn More
                       <svg
@@ -169,7 +182,7 @@
                   to retail automotive marketers.
                 </p>
                 <button
-                  class="flex gap-1 items-center bg-[#1E71A3] rounded-[14px] justify-center text-[#FCFCFC] text-base font-bold leading-normal w-[252px] h-[52px]"
+                  class="flex transition-all ease-in-out duration-300 hover:opacity-90 gap-1 items-center bg-[#1E71A3] rounded-1xl justify-center text-[#FCFCFC] text-base font-bold leading-normal w-[252px] h-[52px]"
                 >
                   SHE HOW IT WORKS
                   <svg
@@ -200,7 +213,7 @@
               </p>
               <div class="flex gap-[30px]">
                 <div
-                  class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                  class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                 >
                   <p class="text-white font-semibold text-xl">
                     Cash App Pay available in US
@@ -216,7 +229,7 @@
                         that's number one in both app stores.
                       </p>
                     </div>
-                    <div class="flex gap-2 items-center">
+                    <div class="flex gap-2 items-center cursor-pointer">
                       <p class="text-white text-base leading-normal font-bold">
                         Learn More
                       </p>
@@ -239,7 +252,7 @@
                   </div>
                 </div>
                 <div
-                  class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                  class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                 >
                   <p class="text-white font-semibold text-xl">
                     Introducing Stripe Reader S700
@@ -255,7 +268,7 @@
                         all-in- one device.
                       </p>
                     </div>
-                    <div class="flex gap-2 items-center">
+                    <div class="flex gap-2 items-center cursor-pointer">
                       <p class="text-white text-base leading-normal font-bold">
                         Learn More
                       </p>
@@ -278,7 +291,7 @@
                   </div>
                 </div>
                 <div
-                  class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                  class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                 >
                   <p class="text-white font-semibold text-xl">
                     2024 Honda CR-V Adds $37,645 Hybrid-Only Sport-L
@@ -294,7 +307,7 @@
                         that's number one in both app stores.
                       </p>
                     </div>
-                    <div class="flex gap-2 items-center">
+                    <div class="flex gap-2 items-center cursor-pointer">
                       <p class="text-white text-base leading-normal font-bold">
                         Learn More
                       </p>
@@ -317,7 +330,7 @@
                   </div>
                 </div>
                 <div
-                  class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                  class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                 >
                   <p class="text-white font-semibold text-xl">
                     1963 Chevy Impala Z11 Lightweight Is Our BaT Pick
@@ -333,7 +346,7 @@
                         that's number one in both app stores.
                       </p>
                     </div>
-                    <div class="flex gap-2 items-center">
+                    <div class="flex gap-2 items-center cursor-pointer">
                       <p class="text-white text-base leading-normal font-bold">
                         Learn More
                       </p>
@@ -471,11 +484,13 @@
                         CTV
                       </p>
                     </a>
-                    <p
-                      class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
-                    >
-                      Audio
-                    </p>
+                    <a href="./audio.html">
+                      <p
+                        class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%]"
+                      >
+                        Audio
+                      </p>
+                    </a>
                   </div>
                   <div class="flex flex-col gap-6">
                     <p

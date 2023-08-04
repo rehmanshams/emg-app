@@ -1,7 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body {
   font-family: "Inter", sans-serif;
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   /* padding-bottom: 100px; */
 }
 .first-container {
@@ -16,20 +19,33 @@ body {
   margin-right: auto;
 }
 .primary-button {
-  background-color: #00C49C;
+  background-color: #00c49c;
   border-radius: 14px;
   padding: 20px 32px 20px 32px;
   cursor: pointer;
   width: 203px;
   height: 52px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+.primary-button:hover {
+  opacity: 80%;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 .set-bg {
+  /* right: 0; */
+  background-color: #f2f7fa;
   background-image: url(./images/buttom-section-bg.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 820px;
+  background-position: right;
   width: 100%;
-  max-width: 1440px;
+  /*
+  background-size: cover;
+  max-width: 1440px; */
+  height: 820px;
 }
 .channel-section-bg {
   background-image: url(./images/channelpage-bg.png);
@@ -70,24 +86,20 @@ body {
   margin-left: auto;
 }
 .logos-bg {
+  background-color: #f2f7fa;
   background-image: url(./images/ctv-logo-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  max-width: 1440px;
   height: 512px;
-  margin-right: auto;
-  margin-left: auto;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  width: 100%;
 }
 .car-name-logo-bg {
+  background-color: #f2f7fa;
   background-image: url(./images/car-name-log-bg.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  max-width: 1440px;
   height: 660px;
-  margin-right: auto;
-  margin-left: auto;
+  background-position: right top;
+  width: 100%;
 }
 .howitworks-bg {
   background-image: url(./images/howitworks-bg.png);
@@ -99,35 +111,25 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-/* .gradient-bg {
-  border-radius: 24px;
-  background: linear-gradient(180deg, #f0faf8 0%, #d9fcf8 100%);
+#custom-video {
+  position: absolute;
+  top: 19px;
+  right: 22px;
 }
-.gradient-text {
-  background: linear-gradient(127deg, #00c49c 0%, #1e71a3 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 800;
-  letter-spacing: -1.6px;
-}
-
-.resource-started-bg {
-  background-image: url(./images/resourse-bottomtwo-sec-image.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 24px;
-}
-
-.commonbg-second {
-  border-radius: 14px;
-  background-color: #ebf7ff;
-  width: 100%;
-  max-width: 534px;
-  padding: 24px;
+.video-bg {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-} */
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 200px;
+  /* background-color: black; */
+  /* height: 375px; */
+  width: 670px;
+  right: 23px;
+  /* opacity: 50%; */
+  /* z-index: 20; */
+}
+#play-pause-button {
+  z-index: 10;
+  background-repeat: no-repeat;
+}

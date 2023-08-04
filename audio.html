@@ -4,13 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            borderRadius: {
+              "1xl": "14px",
+            },
+          },
+        },
+      };
+    </script>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="./images/title-logo.png" type="image/icon type" />
     <title>EMG Audio</title>
   </head>
   <body>
-    <div class="first-container mx-auto">
-      <div class="flex flex-col mx-auto justify-center items-center">
+    <div class="first-container">
+      <div class="flex flex-col justify-center w-full items-center">
         <div
           class="flex justify-between items-center w-full max-w-[1200px] py-[38.8px]"
         >
@@ -22,8 +33,8 @@
           <div>
             <nav>
               <ul class="flex gap-6 font-medium">
-                                <a href="./howitworks.html">
-                <li class="cursor-pointer">How It Works</li>
+                <a href="./howitworks.html">
+                  <li class="cursor-pointer">How It Works</li>
                 </a>
                 <a href="./channels.html">
                   <li class="cursor-pointer">Channels</li>
@@ -58,8 +69,8 @@
             </button>
           </div>
         </div>
-        <div class="w-full max-w-[1440px] flex flex-col gap-[150px]">
-          <div class="ml-auto flex justify-start gap-2.5 items-center">
+        <div class="w-full flex flex-col gap-[150px]">
+          <div class="second-container items-center flex justify-start gap-2.5">
             <div class="flex flex-col gap-[14px]">
               <div class="flex gap-[14px] items-center">
                 <hr class="border border-[#1E71A3] w-8 h-px" />
@@ -75,9 +86,11 @@
                 </p>
               </div>
             </div>
-            <div class="w-full">
-              <img src="./images/audio-mobile-image.png" />
-            </div>
+            <img
+              src="./images/audio-mobile-image.png"
+              width="720px"
+              height="622px"
+            />
           </div>
           <div class="flex second-container gap-[39px]">
             <img src="./images/audio-bottomsec-image.png" />
@@ -102,7 +115,7 @@
                 interests.
               </p>
               <button
-                class="text-[#FCFCFC] text-base font-bold bg-[#1E71A3] flex gap-1 h-[52px] text-center px-8 w-[376px] rounded-[14px] justify-center items-center"
+                class="text-[#FCFCFC] transition-all ease-in-out duration-300 hover:opacity-90 text-base font-bold bg-[#1E71A3] flex gap-1 h-[52px] text-center px-8 w-[376px] rounded-1xl justify-center items-center"
               >
                 Reach Audio-intenders with audio
                 <svg
@@ -197,77 +210,82 @@
               <img src="./images/jaguat-ctv.png" />
             </div>
           </div>
-          <div class="ml-auto flex justify-start items-center gap-[65px]">
-            <p class="text-black font-bold text-[38px] leading-normal ">
-              The advantages of CTV with EMG
-            </p>
+          <div class="second-container">
             <div
-              class="w-full bg-[#F2F7FA] flex flex-col gap-8 rounded-l-[50px] pt-[55.5px] pl-12 pb-[66.5px]"
+              class="min-w-[1319px] flex justify-end flex items-center gap-[65px]"
             >
-              <div class="flex gap-[47px]">
-                <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
-                  01
-                </p>
-                <div class="flex flex-col gap-3 w-[504px]">
-                  <p
-                    class="text-neutral-800 font-bold leading-10 text-[31.5px]"
-                  >
-                    Performance
+              <p class="text-black font-bold text-[38px] leading-normal">
+                The advantages of CTV with EMG
+              </p>
+              <div
+                class="w-full bg-[#F2F7FA] flex flex-col gap-8 rounded-l-[50px] pt-[55.5px] pl-12 pb-[66.5px]"
+              >
+                <div class="flex gap-[47px]">
+                  <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
+                    01
                   </p>
-                  <p class="text-[#212529] text-base font-normal leading-6">
-                    Through unparalleled efficiency, reach confirmed
-                    auto-intenders for a fraction of the cost
-                  </p>
+                  <div class="flex flex-col gap-3 w-[504px]">
+                    <p
+                      class="text-neutral-800 font-bold leading-10 text-[31.5px]"
+                    >
+                      Performance
+                    </p>
+                    <p class="text-[#212529] text-base font-normal leading-6">
+                      Through unparalleled efficiency, reach confirmed
+                      auto-intenders for a fraction of the cost
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="flex gap-[47px]">
-                <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
-                  02
-                </p>
-                <div class="flex flex-col gap-3 w-[504px]">
-                  <p
-                    class="text-neutral-800 font-bold leading-10 text-[31.5px]"
-                  >
-                    Precision Targeting
+                <div class="flex gap-[47px]">
+                  <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
+                    02
                   </p>
-                  <p class="text-[#212529] text-base font-normal leading-6">
-                    Go way beyond demographic data and leverage our curated
-                    auto-intender audiences based on 55M+ dealership walk-ins
-                    over a 5 year period
-                  </p>
+                  <div class="flex flex-col gap-3 w-[504px]">
+                    <p
+                      class="text-neutral-800 font-bold leading-10 text-[31.5px]"
+                    >
+                      Precision Targeting
+                    </p>
+                    <p class="text-[#212529] text-base font-normal leading-6">
+                      Go way beyond demographic data and leverage our curated
+                      auto-intender audiences based on 55M+ dealership walk-ins
+                      over a 5 year period
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="flex gap-[47px]">
-                <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
-                  03
-                </p>
-                <div class="flex flex-col gap-3 w-[504px]">
-                  <p
-                    class="text-neutral-800 font-bold leading-10 text-[31.5px]"
-                  >
-                    Premium Inventory
+                <div class="flex gap-[47px]">
+                  <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
+                    03
                   </p>
-                  <p class="text-[#212529] text-base font-normal leading-6">
-                    Run ads on every ad supported streaming service including
-                    sports and live events. Our inventory is sourced directly
-                    from programmers and publishers, putting more media to work.
-                  </p>
+                  <div class="flex flex-col gap-3 w-[504px]">
+                    <p
+                      class="text-neutral-800 font-bold leading-10 text-[31.5px]"
+                    >
+                      Premium Inventory
+                    </p>
+                    <p class="text-[#212529] text-base font-normal leading-6">
+                      Run ads on every ad supported streaming service including
+                      sports and live events. Our inventory is sourced directly
+                      from programmers and publishers, putting more media to
+                      work.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="flex gap-[47px]">
-                <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
-                  04
-                </p>
-                <div class="flex flex-col gap-3 w-[504px]">
-                  <p
-                    class="text-neutral-800 font-bold leading-10 text-[31.5px]"
-                  >
-                    Measurement
+                <div class="flex gap-[47px]">
+                  <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
+                    04
                   </p>
-                  <p class="text-[#212529] text-base font-normal leading-6">
-                    Measure offline and online metrics including dealership
-                    walk-ins, market share, and VDP views.
-                  </p>
+                  <div class="flex flex-col gap-3 w-[504px]">
+                    <p
+                      class="text-neutral-800 font-bold leading-10 text-[31.5px]"
+                    >
+                      Measurement
+                    </p>
+                    <p class="text-[#212529] text-base font-normal leading-6">
+                      Measure offline and online metrics including dealership
+                      walk-ins, market share, and VDP views.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -290,7 +308,7 @@
                 </p>
                 <div class="flex gap-[30px]">
                   <div
-                    class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                    class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                   >
                     <p class="text-white font-semibold text-xl">
                       Cash App Pay available in US
@@ -306,7 +324,7 @@
                           that's number one in both app stores.
                         </p>
                       </div>
-                      <div class="flex gap-2 items-center">
+                      <div class="flex gap-2 items-center cursor-pointer">
                         <p
                           class="text-white text-base leading-normal font-bold"
                         >
@@ -331,7 +349,7 @@
                     </div>
                   </div>
                   <div
-                    class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                    class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                   >
                     <p class="text-white font-semibold text-xl">
                       Introducing Stripe Reader S700
@@ -347,7 +365,7 @@
                           on an all-in- one device.
                         </p>
                       </div>
-                      <div class="flex gap-2 items-center">
+                      <div class="flex gap-2 items-center cursor-pointer">
                         <p
                           class="text-white text-base leading-normal font-bold"
                         >
@@ -372,7 +390,7 @@
                     </div>
                   </div>
                   <div
-                    class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                    class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                   >
                     <p class="text-white font-semibold text-xl">
                       2024 Honda CR-V Adds $37,645 Hybrid-Only Sport-L
@@ -388,7 +406,7 @@
                           that's number one in both app stores.
                         </p>
                       </div>
-                      <div class="flex gap-2 items-center">
+                      <div class="flex gap-2 items-center cursor-pointer">
                         <p
                           class="text-white text-base leading-normal font-bold"
                         >
@@ -413,7 +431,7 @@
                     </div>
                   </div>
                   <div
-                    class="bg-[#1770A4] py-8 px-[18px] rounded-[14px] w-[278px] flex flex-col gap-9"
+                    class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
                   >
                     <p class="text-white font-semibold text-xl">
                       1963 Chevy Impala Z11 Lightweight Is Our BaT Pick
@@ -464,10 +482,34 @@
                 <div
                   class="flex justify-between border-b border-[#DCE6FF] pb-6"
                 >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    What is MNTN Performance TV advertising?
-                  </p>
+                  <div class="flex flex-col gap-10">
+                    <p class="text-black text-2xl leading-8 font-medium">
+                      What is MNTN Performance TV advertising?
+                    </p>
+                    <p class="faq-answer" id="faq-answer-1">Open answer 1</p>
+                  </div>
                   <svg
+                    onclick="showopen"
+                    class="faq-answer"
+                    id="crosssvg-1"
+                    enable-background="new 0 0 256 256"
+                    id="Layer_1"
+                    version="1.1"
+                    viewBox="0 0 256 256"
+                    height="24px"
+                    width="24px"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      d="M137.051,128l75.475-75.475c2.5-2.5,2.5-6.551,0-9.051s-6.551-2.5-9.051,0L128,118.949L52.525,43.475  c-2.5-2.5-6.551-2.5-9.051,0s-2.5,6.551,0,9.051L118.949,128l-75.475,75.475c-2.5,2.5-2.5,6.551,0,9.051  c1.25,1.25,2.888,1.875,4.525,1.875s3.275-0.625,4.525-1.875L128,137.051l75.475,75.475c1.25,1.25,2.888,1.875,4.525,1.875  s3.275-0.625,4.525-1.875c2.5-2.5,2.5-6.551,0-9.051L137.051,128z"
+                    />
+                  </svg>
+                  <svg
+                    id="opensvg-1"
+                    onclick="toggleAnswer(1)"
+                    class="cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -493,11 +535,35 @@
                 <div
                   class="flex justify-between border-b border-[#DCE6FF] pb-6"
                 >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    How does MNTN Performance TV differ from Traditional TV
-                    adversing?
-                  </p>
+                  <div class="flex flex-col gap-10">
+                    <p class="text-black text-2xl leading-8 font-medium">
+                      How does MNTN Performance TV differ from Traditional TV
+                      adversing?
+                    </p>
+                    <p class="faq-answer" id="faq-answer-2">Open answer 2</p>
+                  </div>
                   <svg
+                    onclick="showopen"
+                    class="faq-answer"
+                    id="crosssvg-2"
+                    enable-background="new 0 0 256 256"
+                    id="Layer_1"
+                    version="1.1"
+                    viewBox="0 0 256 256"
+                    height="24px"
+                    width="24px"
+                    xml:space="preserve"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      d="M137.051,128l75.475-75.475c2.5-2.5,2.5-6.551,0-9.051s-6.551-2.5-9.051,0L128,118.949L52.525,43.475  c-2.5-2.5-6.551-2.5-9.051,0s-2.5,6.551,0,9.051L118.949,128l-75.475,75.475c-2.5,2.5-2.5,6.551,0,9.051  c1.25,1.25,2.888,1.875,4.525,1.875s3.275-0.625,4.525-1.875L128,137.051l75.475,75.475c1.25,1.25,2.888,1.875,4.525,1.875  s3.275-0.625,4.525-1.875c2.5-2.5,2.5-6.551,0-9.051L137.051,128z"
+                    />
+                  </svg>
+                  <svg
+                    id="opensvg-2"
+                    onclick="toggleAnswer(2)"
+                    class="cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -523,11 +589,16 @@
                 <div
                   class="flex justify-between border-b border-[#DCE6FF] pb-6"
                 >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    On what networks and devices can i advertise using MNTN
-                    Performance TV?
-                  </p>
+                  <div class="flex flex-col gap-10">
+                    <p class="text-black text-2xl leading-8 font-medium">
+                      On what networks and devices can i advertise using MNTN
+                      Performance TV?
+                    </p>
+                    <p class="faq-answer" id="faq-answer-3">Open answer 2</p>
+                  </div>
                   <svg
+                    onclick="toggleAnswer(3)"
+                    class="cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -553,11 +624,16 @@
                 <div
                   class="flex justify-between border-b border-[#DCE6FF] pb-6"
                 >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    What does it take to get started with MNTN Performance TV
-                    Advertising?
-                  </p>
+                  <div class="flex flex-col gap-10">
+                    <p class="text-black text-2xl leading-8 font-medium">
+                      What does it take to get started with MNTN Performance TV
+                      Advertising?
+                    </p>
+                    <p class="faq-answer" id="faq-answer-4">Open answer 2</p>
+                  </div>
                   <svg
+                    onclick="toggleAnswer(4)"
+                    class="cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -583,11 +659,16 @@
                 <div
                   class="flex justify-between border-b border-[#DCE6FF] pb-6"
                 >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    What does MNTN Performance TV compare to Paid Search
-                    Advertising?
-                  </p>
+                  <div class="flex flex-col gap-10">
+                    <p class="text-black text-2xl leading-8 font-medium">
+                      What does MNTN Performance TV compare to Paid Search
+                      Advertising?
+                    </p>
+                    <p class="faq-answer" id="faq-answer-5">Open answer 2</p>
+                  </div>
                   <svg
+                    onclick="toggleAnswer(5)"
+                    class="cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -613,11 +694,16 @@
                 <div
                   class="flex justify-between border-b border-[#DCE6FF] pb-6"
                 >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    Can i use my existing video assets for MNTN Performance TV
-                    Advertising?
-                  </p>
+                  <div class="flex flex-col gap-10">
+                    <p class="text-black text-2xl leading-8 font-medium">
+                      Can i use my existing video assets for MNTN Performance TV
+                      Advertising?
+                    </p>
+                    <p class="faq-answer" id="faq-answer-6">Open answer 2</p>
+                  </div>
                   <svg
+                    onclick="toggleAnswer(6)"
+                    class="cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -643,10 +729,15 @@
                 <div
                   class="flex justify-between border-b border-[#DCE6FF] pb-6"
                 >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    What is OTT Advertising?
-                  </p>
+                  <div class="flex flex-col gap-10">
+                    <p class="text-black text-2xl leading-8 font-medium">
+                      What is OTT Advertising?
+                    </p>
+                    <p class="faq-answer" id="faq-answer-7">Open answer 2</p>
+                  </div>
                   <svg
+                    onclick="toggleAnswer(7)"
+                    class="cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -672,11 +763,16 @@
                 <div
                   class="flex justify-between border-b border-[#DCE6FF] pb-6"
                 >
-                  <p class="text-black text-2xl leading-8 font-medium">
-                    I’d like to learn more about Connected TV advertising in
-                    general, can you tell me more?
-                  </p>
+                  <div class="flex flex-col gap-10">
+                    <p class="text-black text-2xl leading-8 font-medium">
+                      I’d like to learn more about Connected TV advertising in
+                      general, can you tell me more?
+                    </p>
+                    <p class="faq-answer" id="faq-answer-8">Open answer 2</p>
+                  </div>
                   <svg
+                    onclick="toggleAnswer(8)"
+                    class="cursor-pointer"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -870,5 +966,6 @@
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

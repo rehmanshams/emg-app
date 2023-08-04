@@ -1,0 +1,68 @@
+const Faqdata = [
+    {
+      id: 1,
+      question: "What is MNTN Performance TV advertising?",
+      answer: "Answer Number One",
+    },
+    {
+      id: 2,
+      question:
+        "How does MNTN Performance TV differ from Traditional TV adversing?",
+      answer: "Answer Number Two",
+    },
+    {
+      id: 3,
+      question:
+        "On what networks and devices can i advertise using MNTN Performance TV?",
+      answer: "Answer Number Three",
+    },
+    {
+      id: 4,
+      question:
+        "What does it take to get started with MNTN Performance TV Advertising?",
+      answer: "Answer Number Four",
+    },
+    {
+      id: 5,
+      question:
+        "What does MNTN Performance TV compare to Paid Search Advertising?",
+      answer: "Answer Number Five",
+    },
+    {
+      id: 6,
+      question:
+        "Can i use my existing video assets for MNTN Performance TV Advertising?",
+      answer: "Answer Number Six",
+    },
+    {
+      id: 7,
+      question: "What is OTT Advertising?",
+      answer: "Answer Number Seven",
+    },
+    {
+      id: 8,
+      question:
+        "What does it take to get started with MNTN Performance TV Advertising?",
+      answer: "Answer Number Eight",
+    },
+  ];
+  const myContent = document.getElementById("myContent");
+  
+  const showInHtml = Faqdata.map((project) => {
+    return `
+      <div class="">
+        <div class="flex justify-between border-b border-[#DCE6FF] pb-6">
+          <p class="text-black text-2xl leading-8 font-medium">
+            ${project.question}
+          </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 4V20" stroke="#0A2463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M20 12H4" stroke="#0A2463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    `;
+  });
+  
+  myContent.innerHTML = showInHtml.join('');
+//   console.log(showInHtml, "get the hmt");
