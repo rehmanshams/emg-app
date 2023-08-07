@@ -42,8 +42,11 @@ function togglePlayPause() {
     video.pause();
   }
 }
-video.addEventListener("mouseover", showPauseButton);
-video.addEventListener("mouseout", hidePauseButton);
+
+if (video) {
+  video.addEventListener("mouseover", showPauseButton);
+  video.addEventListener("mouseout", hidePauseButton);
+}
 
 function showPauseButton() {
   console.log("hit11");
@@ -58,7 +61,7 @@ function hidePauseButton() {
 // const faqsecData = [
 
 // ];
-const Faqdata = [
+const faqData = [
   {
     id: 1,
     question: "What is MNTN Performance TV advertising?",
@@ -106,28 +109,89 @@ const Faqdata = [
     answer: "Answer Number Eight",
   },
 ];
-const myContent = document.getElementById("myContent");
+const faqContent = document.getElementById("faq-content");
 
-const showInHtml = Faqdata.map((project) => {
+const showInHtml = faqData.map((item) => {
   return `
-    <div class="">
-      <div class="flex justify-between border-b border-[#DCE6FF] pb-6">
-        <p class="text-black text-2xl leading-8 font-medium">
-          ${project.question}
-        </p>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M12 4V20" stroke="#0A2463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M20 12H4" stroke="#0A2463" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
+  <div class="">
+  <div
+    class="flex justify-between border-b border-[#DCE6FF] pb-6"
+  >
+  <div class="flex flex-col gap-8">
+    <p class="text-black text-2xl leading-8 font-medium">
+      ${item.question}
+    </p>
+    <p id="answer-${item.id}" class="hidden">
+    ${item.answer}
+    </p>
+
     </div>
-  `;
+    <div
+    class="cursor-pointer"
+    onclick="togglefun(${item.id})"
+    >
+    
+      <svg
+        id="open-${item.id}"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M12 4V20"
+          stroke="#0A2463"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M20 12H4"
+          stroke="#0A2463"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <svg
+      class="hidden"
+      id="close-${item.id}"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 12H6"
+        stroke="#0A2463"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    </div>
+  </div>
+</div>
+    `;
 });
 
-myContent.innerHTML = showInHtml.join('');
-fetch('ctv.html')
-.then(response => response.text())
-.then(content => {
-    document.getElementById('imported-content').innerHTML = content;
-  })
-.catch(error => console.error('Error fetching content:', error));
+if (faqContent) faqContent.innerHTML = showInHtml.join("");
+let currentFaq = 0;
+function togglefun(id) {
+  // const getanswer = document.getElementById("answer-id");
+  if (currentFaq == id) {
+    currentFaq = 0;
+    document.getElementById(`answer-${id}`).classList.add("hidden");
+    document.getElementById(`close-${id}`).style.display = "none";
+    document.getElementById(`open-${id}`).style.display = "block";
+    // console.log("first", document.getElementById("answer-id"));
+  } else {
+    currentFaq = id;
+    document.getElementById(`answer-${id}`).classList.remove("hidden");
+    document.getElementById(`close-${id}`).style.display = "block";
+    document.getElementById(`open-${id}`).style.display = "none";
+    // console.log("first", document.getElementById("answer-id"));
+  }
+}
