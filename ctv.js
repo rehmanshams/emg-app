@@ -101,7 +101,7 @@ myContent.innerHTML = showInHtml.join("");
 let currentFaq = 0;
 function togglefun(id) {
   // const getanswer = document.getElementById("answer-id");
-  if (currentFaq === id) {
+  if (currentFaq == id) {
     currentFaq = 0;
     document.getElementById("answer-id").classList.add("hidden");
     // console.log("first", document.getElementById("answer-id"));

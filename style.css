@@ -48,15 +48,14 @@ body {
   height: 820px;
 }
 .channel-section-bg {
-  background-image: url(./images/channelpage-bg.png);
+  background-color: #f2f7fa;
+  background-image: url(./images/channelpage-bgone.png), url(./images/channelpage-bgtwo.png);
   background-repeat: no-repeat;
-  background-size: cover;
   height: 1202px;
   width: 100%;
-  max-width: 1440px;
-  padding-top: 100px;
   display: flex;
   justify-content: center;
+  background-position: left bottom, top right;
   flex-direction: column;
   align-items: center;
 }
@@ -102,14 +101,12 @@ body {
   width: 100%;
 }
 .howitworks-bg {
-  background-image: url(./images/howitworks-bg.png);
+  background-position: right bottom , top 513px right , left center;
+  background-image: url(./images/howitworks-image-three.png), url(./images/howitworks-image-one.png) , url(./images/howitworks-image-two.png);
+  background-color: #f2f7fa;
   background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
-  max-width: 1440px;
   height: 3719px;
-  margin-right: auto;
-  margin-left: auto;
 }
 #custom-video {
   position: absolute;
