@@ -197,19 +197,19 @@
                     </div>
                   </div>
                   <div class="relative flex justify-center">
-                    <div class="video-container">
+                    <div onmouseenter="hoverImagePause()" onmouseleave="leaveContainerVideo()" class="video-container">
                       <img src="./images/tv-image.png" />
-                      <video id="custom-video" width="670" height="430">
+                      <video  id="video-id" width="670" height="430">
                         <source src="./video/video.mp4" type="video/ogg" />
                         Video is Loading...
                       </video>
-                      <div class="video-bg">
+                      <div class="button-classes">
                         <button
-                          id="play-pause-button"
                           class="absolute w-12 h-12"
                           onclick="togglePlayPause()"
                         >
-                          <img id="f" src="./images/player_icon.png" />
+                          <img id="hidden-play-button" src="./images/player_icon.png" />
+                          <img id="play-pause-icon"/>
                         </button>
                       </div>
                     </div>

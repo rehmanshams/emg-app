@@ -1,27 +1,23 @@
-const video = document.getElementById("custom-video");
-const playPauseButton = document.getElementById("play-pause-button");
+const video = document.getElementById("video-id");
+const myImage = document.getElementById("play-pause-icon");
+
 function togglePlayPause() {
   if (video.paused) {
     video.play();
-    document.getElementById("f").style.display = "none";
+    document.getElementById("hidden-play-button").style.display = "none";
+    myImage.src = "./images/pause_circle_icon.png"
   } else {
-    video.pause();
+    video.pause()
+    myImage.src = "./images/player_icon.png"
   }
 }
-
-// if (video) {
-//   video.addEventListener("mouseover", showPauseButton);
-//   video.addEventListener("mouseout", hidePauseButton);
-// }
-
-// function showPauseButton() {
-//   const myImage = document.getElementById("f");
-//   myImage.src = "./images/pause-icon";
-// }
-
-function hidePauseButton() {
-  const myImage = document.getElementById("f");
-  myImage.src = "./images/player_icon.png";
+function hoverImagePause() {
+  if (video.paused) return;
+  myImage.src = "./images/pause_circle_icon.png";
+}
+function leaveContainerVideo() {
+  if (video.paused) return;
+  myImage.src = "";
 }
 const faqData = [
   {
