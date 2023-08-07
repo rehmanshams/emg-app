@@ -1,66 +1,28 @@
-const allAnswers = document.getElementsByClassName("faq-answer");
-
-function toggleAnswer(id) {
-  const answerElement = document.getElementById(`faq-answer-${id}`);
-  const crossssvg = document.getElementById(`crosssvg-${id}`);
-  const openssvg = document.getElementById(`opensvg-${id}`);
-
-  for (let i = 0; i < allAnswers.length; i++) {
-    if (allAnswers[i] !== answerElement) {
-      allAnswers[i].style.display = "none";
-    }
-  }
-
-  if (answerElement.style.display === "block") {
-    answerElement.style.display = "none";
-    crossssvg.style.display = "none";
-    openssvg.style.display = "block";
-  } else {
-    answerElement.style.display = "block";
-    crossssvg.style.display = "block";
-    openssvg.style.display = "none";
-  }
-}
-
-function showopen() {
-  if (openssvg.style.display == "none") {
-    return openssvg.style.display == "block";
-  }
-}
-// Initially hide all the answers
-for (let i = 0; i < allAnswers.length; i++) {
-  allAnswers[i].style.display = "none";
-}
-
 const video = document.getElementById("custom-video");
 const playPauseButton = document.getElementById("play-pause-button");
 function togglePlayPause() {
-  console.log("hit");
   if (video.paused) {
     video.play();
+    document.getElementById("f").style.display = "none";
   } else {
     video.pause();
   }
 }
 
-if (video) {
-  video.addEventListener("mouseover", showPauseButton);
-  video.addEventListener("mouseout", hidePauseButton);
-}
+// if (video) {
+//   video.addEventListener("mouseover", showPauseButton);
+//   video.addEventListener("mouseout", hidePauseButton);
+// }
 
-function showPauseButton() {
-  console.log("hit11");
-  const myImage = document.getElementById("f");
-  myImage.src = "./images/pause-icon";
-}
+// function showPauseButton() {
+//   const myImage = document.getElementById("f");
+//   myImage.src = "./images/pause-icon";
+// }
 
 function hidePauseButton() {
   const myImage = document.getElementById("f");
   myImage.src = "./images/player_icon.png";
 }
-// const faqsecData = [
-
-// ];
 const faqData = [
   {
     id: 1,
@@ -180,18 +142,15 @@ const showInHtml = faqData.map((item) => {
 if (faqContent) faqContent.innerHTML = showInHtml.join("");
 let currentFaq = 0;
 function togglefun(id) {
-  // const getanswer = document.getElementById("answer-id");
   if (currentFaq == id) {
     currentFaq = 0;
     document.getElementById(`answer-${id}`).classList.add("hidden");
     document.getElementById(`close-${id}`).style.display = "none";
     document.getElementById(`open-${id}`).style.display = "block";
-    // console.log("first", document.getElementById("answer-id"));
   } else {
     currentFaq = id;
     document.getElementById(`answer-${id}`).classList.remove("hidden");
     document.getElementById(`close-${id}`).style.display = "block";
     document.getElementById(`open-${id}`).style.display = "none";
-    // console.log("first", document.getElementById("answer-id"));
   }
 }
