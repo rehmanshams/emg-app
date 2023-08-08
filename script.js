@@ -3,6 +3,15 @@ const myImage = document.getElementById("play-pause-icon");
 let initialLoadValue = true;
 let initialLoadValueSec = true;
 let initialLoadValueThird = true;
+let initialLoadValueCtvCamp = true;
+let initialLoadValueCtvCampSec = true;
+let initialLoadValueCtvDealerShipFirst = true;
+let initialLoadValueCtvDealerShip = true;
+let initialLoadValueCtHouseHolds = true;
+let initialLoadValueAudioMarketStream = true;
+let initialLoadValueAudioMarketVehicle = true;
+let initialLoadValueAudioCunsumeMusic = true;
+let initialLoadValueAudioCunsumeSupport = true;
 
 function togglePlayPause() {
   if (video.paused) {
@@ -299,10 +308,11 @@ function portViewValue() {
 
 window.addEventListener("scroll", portViewValue);
 
-
-
-
-function progressNumberWithDurationSec(getProgressIdSec, durationMs, finalValue) {
+function progressNumberWithDurationSec(
+  getProgressIdSec,
+  durationMs,
+  finalValue
+) {
   var i = 0;
   if (i == 0) {
     i = 1;
@@ -343,8 +353,6 @@ function portViewValueSec() {
 
 window.addEventListener("scroll", portViewValueSec);
 
-
-
 function numberFormatThird(num) {
   var numStr = num.toString();
   var length = numStr.length;
@@ -358,7 +366,11 @@ function numberFormatThird(num) {
   }
 }
 
-function progressNumberWithDurationThird(getProgressIdThird, durationMs, finalValue) {
+function progressNumberWithDurationThird(
+  getProgressIdThird,
+  durationMs,
+  finalValue
+) {
   var i = 0;
   if (i == 0) {
     i = 1;
@@ -372,7 +384,9 @@ function progressNumberWithDurationThird(getProgressIdThird, durationMs, finalVa
         clearInterval(id);
       } else {
         initialValue += step;
-        getProgressIdThird.innerHTML = numberFormatThird(Math.round(initialValue));
+        getProgressIdThird.innerHTML = numberFormatThird(
+          Math.round(initialValue)
+        );
       }
     }
   }
@@ -381,7 +395,9 @@ function progressNumberWithDurationThird(getProgressIdThird, durationMs, finalVa
 function handleInterThird(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      const getProgressIdThird = document.getElementById("number-progress-three");
+      const getProgressIdThird = document.getElementById(
+        "number-progress-three"
+      );
       progressNumberWithDurationThird(getProgressIdThird, 2000, 8000);
       observer.unobserve(entry.target);
     }
@@ -398,5 +414,521 @@ function portViewValueThird() {
 }
 
 window.addEventListener("scroll", portViewValueThird);
-progressNumberThree();
 
+function progressNumberWithDurationCtvCamp(
+  getProgressIdCtvCamp,
+  durationMs,
+  finalValue
+) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdCtvCamp.innerHTML = numberFormatCtvCamp(
+          Math.round(initialValue)
+        );
+      }
+    }
+  }
+}
+
+function handleInterCtvCamp(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdCtvCamp = document.getElementById(
+        "ctv-facts-campaings"
+      );
+      progressNumberWithDurationCtvCamp(getProgressIdCtvCamp, 2000, 8000);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueCtvCamp() {
+  if (initialLoadValueCtvCamp) {
+    initialLoadValueCtvCamp = false;
+    const targetElementCtvCamp = document.getElementById("ctv-facts-campaings");
+    const observer = new IntersectionObserver(handleInterCtvCamp);
+    observer.observe(targetElementCtvCamp);
+  }
+}
+
+window.addEventListener("scroll", portViewValueCtvCamp);
+
+function numberFormatCtvCamp(num) {
+  var numStr = num.toString();
+  var length = numStr.length;
+
+  if (length <= 2) {
+    return numStr;
+  } else if (length <= 5) {
+    return numStr.substr(0, length - 3) + "." + numStr.substr(length - 3);
+  } else {
+    return;
+  }
+}
+
+
+function progressNumberWithDurationCtvDealerShip(
+  getProgressIdCtvDealerShip,
+  durationMs,
+  finalValue
+) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdCtvDealerShip.innerHTML = numberFormatCtvDealerShip(
+          Math.round(initialValue)
+        );
+      }
+    }
+  }
+}
+
+function handleInterCtvDealerShip(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdCtvDealerShip = document.getElementById(
+        "ctv-facts-dealerships"
+      );
+      progressNumberWithDurationCtvDealerShip(getProgressIdCtvDealerShip, 2000, 47);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueCtvDealerShip() {
+  if (initialLoadValueCtvDealerShip   ) {
+    initialLoadValueCtvDealerShip    = false;
+    const targetElementCtvDealerShip = document.getElementById("ctv-facts-dealerships");
+    const observer = new IntersectionObserver(handleInterCtvDealerShip);
+    observer.observe(targetElementCtvDealerShip);
+  }
+}
+
+window.addEventListener("scroll", portViewValueCtvDealerShip);
+
+function numberFormatCtvDealerShip(num) {
+  var numStr = num.toString();
+  var length = numStr.length;
+
+  if (length <= 1) {
+    return numStr;
+  } else if (length <= 4) {
+    return numStr.substr(0, 1) + "." + numStr.substr(1);
+  } else if (length <= 7) {
+    return numStr.substr(0, length - 6) + "." + numStr.substr(length - 6, 3) + "." + numStr.substr(length - 3);
+  } else {
+    return;
+  }
+}
+
+
+function progressNumberWithDurationCtvDealerShipFirst(
+  getProgressIdCtvDealerShipFirst,
+  durationMs,
+  finalValue
+) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdCtvDealerShipFirst.innerHTML = numberFormatCtvDealerShipFirst(
+          Math.round(initialValue)
+        );
+      }
+    }
+  }
+}
+
+function handleInterCtvDealerShipFirst(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdCtvDealerShipFirst = document.getElementById(
+        "ctv-facts-dealerships-one"
+      );
+      progressNumberWithDurationCtvDealerShipFirst(getProgressIdCtvDealerShipFirst, 2000, 115);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueCtvDealerShipFirst() {
+  if (initialLoadValueCtvDealerShipFirst   ) {
+    initialLoadValueCtvDealerShipFirst    = false;
+    const targetElementCtvDealerShipFirst = document.getElementById("ctv-facts-dealerships-one");
+    const observer = new IntersectionObserver(handleInterCtvDealerShipFirst);
+    observer.observe(targetElementCtvDealerShipFirst);
+  }
+}
+
+window.addEventListener("scroll", portViewValueCtvDealerShipFirst);
+function numberFormatCtvDealerShipFirst(num) {
+  var numStr = num.toString();
+  var length = numStr.length;
+
+  if (length <= 1) {
+    return numStr + "M+";
+  } else if (length <= 4) {
+    return numStr.substr(0, 1) + numStr.substr(1) + "M+";
+  } else if (length <= 7) {
+    return numStr.substr(0, length - 6) + numStr.substr(length - 6, 3) + numStr.substr(length - 3) + "M+";
+  } else {
+    return;
+  }
+}
+
+
+function progressNumberWithDurationCtvHouseHolds(
+  getProgressIdCtvHouseHolds,
+  durationMs,
+  finalValue
+) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdCtvHouseHolds.innerHTML = numberFormatCtvHouseHolds(
+          Math.round(initialValue)
+        );
+      }
+    }
+  }
+}
+
+function handleInterCtvHouseHolds(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdCtvHouseHolds = document.getElementById(
+        "ctv-facts-households"
+      );
+      progressNumberWithDurationCtvHouseHolds(getProgressIdCtvHouseHolds, 2000, 90);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueCtvHouseHold() {
+  if (initialLoadValueCtHouseHolds   ) {
+    initialLoadValueCtHouseHolds    = false;
+    const targetElementCtvHouseHold = document.getElementById("ctv-facts-households");
+    const observer = new IntersectionObserver(handleInterCtvHouseHolds);
+    observer.observe(targetElementCtvHouseHold);
+  }
+}
+
+window.addEventListener("scroll", portViewValueCtvHouseHold);
+function numberFormatCtvHouseHolds(num) {
+  var numStr = num.toString();
+  var length = numStr.length;
+
+  if (length <= 1) {
+    return numStr + "%";
+  } else if (length <= 4) {
+    return numStr.substr(0, 1) + numStr.substr(1) + "%";
+  } else if (length <= 7) {
+    return numStr.substr(0, length - 6) + numStr.substr(length - 6, 3) + numStr.substr(length - 3) + "%";
+  } else {
+    return;
+  }
+}
+
+
+function progressNumberWithDurationCtvCampsSec(
+  getProgressIdCtvCampsSec,
+  durationMs,
+  finalValue
+) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdCtvCampsSec.innerHTML = numberFormatCtvHouseHolds(
+          Math.round(initialValue)
+        );
+      }
+    }
+  }
+}
+
+function handleInterCtvCampsSec(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdCtvCampsSec = document.getElementById(
+        "ctv-facts-campaings-sec"
+      );
+      progressNumberWithDurationCtvCampsSec(getProgressIdCtvCampsSec, 2000, 56);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueCtvCampsSec() {
+  if (initialLoadValueCtvCampSec   ) {
+    initialLoadValueCtvCampSec    = false;
+    const targetElementCtvCampsSec = document.getElementById("ctv-facts-campaings-sec");
+    const observer = new IntersectionObserver(handleInterCtvCampsSec);
+    observer.observe(targetElementCtvCampsSec);
+  }
+}
+
+window.addEventListener("scroll", portViewValueCtvCampsSec);
+
+
+function progressNumberWithDurationAudioMarketStream(
+  getProgressIdAudioMarketStream,
+  durationMs,
+  finalValue
+) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdAudioMarketStream.innerHTML = numberFormatCtvDealerShipFirst(
+          Math.round(initialValue)
+        );
+      }
+    }
+  }
+}
+
+function handleInterAudioMarketStream(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdAudioMarketStream = document.getElementById(
+        "audio-streaming-users"
+      );
+      progressNumberWithDurationAudioMarketStream(getProgressIdAudioMarketStream, 2000, 228);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueAudioMarketStream() {
+  if (initialLoadValueAudioMarketStream   ) {
+    initialLoadValueAudioMarketStream    = false;
+    const targetElementAudioMarketStream = document.getElementById("audio-streaming-users");
+    const observer = new IntersectionObserver(handleInterAudioMarketStream);
+    observer.observe(targetElementAudioMarketStream);
+  }
+}
+window.addEventListener("scroll", portViewValueAudioMarketStream);
+
+
+
+function progressNumberWithDurationAudioMarketVehicle(
+  getProgressIdAudioMarketVehicle,
+  durationMs,
+  finalValue
+) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdAudioMarketVehicle.innerHTML = numberFormatAudioMarketVehicle(
+          Math.round(initialValue)
+        );
+      }
+    }
+  }
+}
+
+function handleInterAudioMarketVehicle(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdAudioMarketVehicle = document.getElementById(
+        "audio-streaming-vehicle"
+      );
+      progressNumberWithDurationAudioMarketVehicle(getProgressIdAudioMarketVehicle, 2000, 31);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueAudioMarketVehicle() {
+  if (initialLoadValueAudioMarketVehicle   ) {
+    initialLoadValueAudioMarketVehicle    = false;
+    const targetElementAudioMarketVehicle = document.getElementById("audio-streaming-vehicle");
+    const observer = new IntersectionObserver(handleInterAudioMarketVehicle);
+    observer.observe(targetElementAudioMarketVehicle);
+  }
+}
+window.addEventListener("scroll", portViewValueAudioMarketVehicle);
+function numberFormatAudioMarketVehicle(num) {
+  var numStr = num.toString();
+  var length = numStr.length;
+
+  if (length <= 1) {
+    return numStr + "M+";
+  } else if (length <= 4) {
+    return numStr.substr(0, 1) + "." + numStr.substr(1) + "M+";
+  } else if (length <= 7) {
+    return numStr.substr(0, length - 6) + "." + numStr.substr(length - 6, 3) + "." + numStr.substr(length - 3) + "M+";
+  } else {
+    return;
+  }
+}
+
+
+function progressNumberWithDurationAudioCunsumeMusic(
+  getProgressIdAudioCunsumeMusic,
+  durationMs,
+  finalValue
+) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdAudioCunsumeMusic.innerHTML = numberFormatCtvHouseHolds(
+          Math.round(initialValue)
+        );
+      }
+    }
+  }
+}
+
+function handleInterAudioCunsumeMusic(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdAudioCunsumeMusic = document.getElementById(
+        "audio-cunsume-music"
+      );
+      progressNumberWithDurationAudioCunsumeMusic(getProgressIdAudioCunsumeMusic, 2000, 78);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueAudioCunsumeMusic() {
+  if (initialLoadValueAudioCunsumeMusic   ) {
+    initialLoadValueAudioCunsumeMusic    = false;
+    const targetElementAudioCunsumeMusic = document.getElementById("audio-cunsume-music");
+    const observer = new IntersectionObserver(handleInterAudioCunsumeMusic);
+    observer.observe(targetElementAudioCunsumeMusic);
+  }
+}
+
+window.addEventListener("scroll", portViewValueAudioCunsumeMusic);
+
+
+function progressNumberWithDurationAudioCunsumeSupport(
+  getProgressIdAudioCunsumeSupport,
+  durationMs,
+  finalValue
+) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdAudioCunsumeSupport.innerHTML = numberFormatCtvHouseHolds(
+          Math.round(initialValue)
+        );
+      }
+    }
+  }
+}
+
+function handleInterAudioCunsumeSupport(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdAudioCunsumeSupport = document.getElementById(
+        "audio-cunsume-support"
+      );
+      progressNumberWithDurationAudioCunsumeSupport(getProgressIdAudioCunsumeSupport, 2000, 53);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueAudioCunsumeSupport() {
+  if (initialLoadValueAudioCunsumeSupport   ) {
+    initialLoadValueAudioCunsumeSupport    = false;
+    const targetElementAudioCunsumeSupport = document.getElementById("audio-cunsume-support");
+    const observer = new IntersectionObserver(handleInterAudioCunsumeSupport);
+    observer.observe(targetElementAudioCunsumeSupport);
+  }
+}
+
+window.addEventListener("scroll", portViewValueAudioCunsumeSupport);
