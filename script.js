@@ -329,11 +329,9 @@ function toggleClickEight() {
     document.getElementById("opensvg-8").style.display = "none";
   }
 }
-
 function logWindowOffset() {
   const offsetY = window.scrollY;
   console.log("Window Offset Y:", offsetY);
-  
   if (offsetY < 1050) {
     console.log("get the viewport");
     var i = 0;
