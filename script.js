@@ -1,6 +1,7 @@
 const video = document.getElementById("video-id");
 const myImage = document.getElementById("play-pause-icon");
 let initialLoad = true;
+let initialLoadValueSec = true;
 
 function togglePlayPause() {
   if (video.paused) {
@@ -140,48 +141,6 @@ function leaveContainerVideo() {
 //     document.getElementById(`open-${id}`).style.display = "none";
 //   }
 // }
-// var i = 0;
-
-// function progressNumOne() {
-//   if (i == 0) {
-//     i = 1;
-//     var getProgressId = document.getElementById("number-progress-one");
-//     var length = 49999920;
-//     getProgressId.innerHTML = formatNumber(length);
-//     var id = setInterval(frame, 0);
-//     function frame() {
-//       if (length >= 50000000) {
-//         clearInterval(id);
-//       } else {
-//         length++;
-//         getProgressId.innerHTML = formatNumber(length);
-//       }
-//     }
-//   }
-// }
-
-// progressNumOne();
-var i = 0;
-
-function progressNumberTwo() {
-  if (i == 0) {
-    i = 1;
-    var getProgressIdSec = document.getElementById("number-progress-two");
-    var length = 49999900;
-    getProgressIdSec.innerHTML = formatNumber(length);
-    var id = setInterval(frame, 0);
-
-    function frame() {
-      if (length >= 50000000) {
-        clearInterval(id);
-      } else {
-        length++;
-        getProgressIdSec.innerHTML = formatNumber(length);
-      }
-    }
-  }
-}
-progressNumberTwo();
 function formatNumber(num) {
   var numStr = num.toString();
   var length = numStr.length;
@@ -331,10 +290,10 @@ function toggleClickEight() {
   }
 }
 
-function logWindowOffset() {
+function portViewValue() {
   const offsetY = window.scrollY;
   if (initialLoad == true) {
-    if (offsetY < 1050) {
+    if (offsetY < 1250) {
       initialLoad = false;
       var i = 0;
       function progressNumOne() {
@@ -359,7 +318,7 @@ function logWindowOffset() {
   } else return;
 }
 if (typeof window !== window) {
-  window.addEventListener("scroll", logWindowOffset);
+  window.addEventListener("scroll", portViewValue);
 }
 function pageLoadViewPort() {
   const newoffsetY = window.scrollY;
@@ -371,7 +330,7 @@ function pageLoadViewPort() {
         var getProgressId = document.getElementById("number-progress-one");
         var length = 49999920;
         getProgressId.innerHTML = formatNumber(length);
-        var id = setInterval(frame, 50);
+        var id = setInterval(frame, 20);
         function frame() {
           if (length >= 50000000) {
             clearInterval(id);
@@ -387,3 +346,109 @@ function pageLoadViewPort() {
   }
 }
 pageLoadViewPort();
+// function portViewValueSec() {
+//   const offsetY = window.scrollY;
+//   if (initialLoadValueSec == true) {
+//     if (offsetY < 1250) {
+//       initialLoadValueSec = false;
+//       var i = 0;
+//       function progressNumberWithDuration(durationMs, finalValue) {
+//         if (i == 0) {
+//           i = 1;
+//           var getProgressIdSec = document.getElementById("number-progress-two");
+//           var initialValue = 0;
+//           var step = (finalValue - initialValue) / (durationMs / 20);
+
+//           var id = setInterval(frame, 20);
+
+//           function frame() {
+//             if (initialValue >= finalValue) {
+//               clearInterval(id);
+//             } else {
+//               initialValue += step;
+//               getProgressIdSec.innerHTML = formatNumber(
+//                 Math.round(initialValue)
+//               );
+//             }
+//           }
+//         }
+//       }
+//       progressNumberWithDuration(2000, 50000000);
+//     }
+//   } else return;
+// }
+// if (typeof window !== window) {
+//   window.addEventListener("scroll", portViewValueSec);
+// }
+// function pageLoadViewPortValueSec() {
+//   const secValueOffSetY = window.scrollY;
+//   console.log(secValueOffSetY);
+//   if (secValueOffSetY > 1050) {
+//     var i = 0;
+//     function progressNumberWithDuration(durationMs, finalValue) {
+//       if (i == 0) {
+//         i = 1;
+//         var getProgressIdSec = document.getElementById("number-progress-two");
+//         var initialValue = 0;
+//         var step = (finalValue - initialValue) / (durationMs / 20);
+
+//         var id = setInterval(frame, 20);
+
+//         function frame() {
+//           if (initialValue >= finalValue) {
+//             clearInterval(id);
+//           } else {
+//             initialValue += step;
+//             getProgressIdSec.innerHTML = formatNumber(Math.round(initialValue));
+//           }
+//         }
+//       }
+//     }
+//     progressNumberWithDuration(2000, 50000000);
+//     console.log(secValueOffSetY, "get the portview");
+//   }
+// }
+// pageLoadViewPortValueSec();
+
+function progressNumberWithDuration(getProgressIdSec, durationMs, finalValue) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 20);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdSec.innerHTML = formatNumber(
+          Math.round(initialValue)
+        );
+      }
+    }
+  }
+}
+
+function handleIntersect(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const getProgressIdSec = document.getElementById("number-progress-two");
+      progressNumberWithDuration(getProgressIdSec, 2000, 50000000);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueSec() {
+  if (initialLoadValueSec) {
+    initialLoadValueSec = false;
+    const targetElement = document.getElementById("number-progress-two");
+    const observer = new IntersectionObserver(handleIntersect);
+    observer.observe(targetElement);
+  }
+}
+
+window.addEventListener("scroll", portViewValueSec);
