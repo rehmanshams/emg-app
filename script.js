@@ -139,27 +139,48 @@ function leaveContainerVideo() {
 //     document.getElementById(`open-${id}`).style.display = "none";
 //   }
 // }
+// var i = 0;
+
+// function prograssNumOne() {
+//   if (i == 0) {
+//     i = 1;
+//     var getPrograssId = document.getElementById("number-progress-one");
+//     var length = 49999920;
+//     getPrograssId.innerHTML = formatNumber(length);
+//     var id = setInterval(frame, 0);
+//     function frame() {
+//       if (length >= 50000000) {
+//         clearInterval(id);
+//       } else {
+//         length++;
+//         getPrograssId.innerHTML = formatNumber(length);
+//       }
+//     }
+//   }
+// }
+
+// prograssNumOne();
 var i = 0;
 
-function prograssNumOne() {
+function prograssNumberTwo() {
   if (i == 0) {
     i = 1;
-    var getPrograssId = document.getElementById("number-progress-one");
-    var length = 49999920;
-    console.log(formatNumber(length));
-    getPrograssId.innerHTML = formatNumber(length);
+    var getPrograssIdSec = document.getElementById("number-progress-two");
+    var length = 49999900;
+    getPrograssIdSec.innerHTML = formatNumber(length);
     var id = setInterval(frame, 0);
+
     function frame() {
       if (length >= 50000000) {
         clearInterval(id);
       } else {
         length++;
-        getPrograssId.innerHTML = formatNumber(length);
+        getPrograssIdSec.innerHTML = formatNumber(length);
       }
     }
   }
 }
-
+prograssNumberTwo();
 function formatNumber(num) {
   var numStr = num.toString();
   var length = numStr.length;
@@ -178,29 +199,7 @@ function formatNumber(num) {
     );
   }
 }
-prograssNumOne();
-var i = 0;
 
-function prograssNumberTwo() {
-  if (i == 0) {
-    i = 1;
-    var getPrograssIdSec = document.getElementById("number-progress-two");
-    var length = 49999900;
-    console.log(formatNumber(length));
-    getPrograssIdSec.innerHTML = formatNumber(length);
-    var id = setInterval(frame, 0);
-
-    function frame() {
-      if (length >= 50000000) {
-        clearInterval(id);
-      } else {
-        length++;
-        getPrograssIdSec.innerHTML = formatNumber(length);
-      }
-    }
-  }
-}
-prograssNumberTwo();
 var i = 0;
 
 function prograssNumberThree() {
@@ -330,3 +329,63 @@ function toggleClickEight() {
     document.getElementById("opensvg-8").style.display = "none";
   }
 }
+
+function logWindowOffset() {
+  const offsetX = window.scrollX;
+  const offsetY = window.scrollY;
+  console.log("Window Offset X:", offsetX);
+  console.log("Window Offset Y:", offsetY);
+  if (offsetY < 1050 || offsetY > 2500) {
+    console.log("get the viewport");
+    var i = 0;
+    function prograssNumOne() {
+      if (i == 0) {
+        i = 1;
+        var getPrograssId = document.getElementById("number-progress-one");
+        var length = 49999920;
+        getPrograssId.innerHTML = formatNumber(length);
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (length >= 50000000) {
+            clearInterval(id);
+          } else {
+            length++;
+            getPrograssId.innerHTML = formatNumber(length);
+          }
+        }
+      }
+    }
+    prograssNumOne();
+  }
+}
+if (typeof window !== window) {
+  // Add event listener to check the window offset when the page is scrolled
+  // window.onload()
+  window.addEventListener("scroll", logWindowOffset);
+}
+function newviewport() {
+  const newoffsetY = window.scrollY;
+  if (newoffsetY > 1050) {
+    var i = 0;
+    function prograssNumOne() {
+      if (i == 0) {
+        i = 1;
+        var getPrograssId = document.getElementById("number-progress-one");
+        var length = 49999920;
+        getPrograssId.innerHTML = formatNumber(length);
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (length >= 50000000) {
+            clearInterval(id);
+          } else {
+            length++;
+            getPrograssId.innerHTML = formatNumber(length);
+          }
+        }
+      }
+    }
+    prograssNumOne();
+    console.log(newoffsetY, "get the portview");
+  }
+}
+newviewport();
