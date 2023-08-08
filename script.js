@@ -1,5 +1,8 @@
 const video = document.getElementById("video-id");
 const myImage = document.getElementById("play-pause-icon");
+let initialLoadValue = true;
+let initialLoadValueSec = true;
+let initialLoadValueThird = true;
 
 function togglePlayPause() {
   if (video.paused) {
@@ -139,48 +142,6 @@ function leaveContainerVideo() {
 //     document.getElementById(`open-${id}`).style.display = "none";
 //   }
 // }
-// var i = 0;
-
-// function progressNumOne() {
-//   if (i == 0) {
-//     i = 1;
-//     var getProgressId = document.getElementById("number-progress-one");
-//     var length = 49999920;
-//     getProgressId.innerHTML = formatNumber(length);
-//     var id = setInterval(frame, 0);
-//     function frame() {
-//       if (length >= 50000000) {
-//         clearInterval(id);
-//       } else {
-//         length++;
-//         getProgressId.innerHTML = formatNumber(length);
-//       }
-//     }
-//   }
-// }
-
-// progressNumOne();
-var i = 0;
-
-function progressNumberTwo() {
-  if (i == 0) {
-    i = 1;
-    var getProgressIdSec = document.getElementById("number-progress-two");
-    var length = 49999900;
-    getProgressIdSec.innerHTML = formatNumber(length);
-    var id = setInterval(frame, 0);
-
-    function frame() {
-      if (length >= 50000000) {
-        clearInterval(id);
-      } else {
-        length++;
-        getProgressIdSec.innerHTML = formatNumber(length);
-      }
-    }
-  }
-}
-progressNumberTwo();
 function formatNumber(num) {
   var numStr = num.toString();
   var length = numStr.length;
@@ -200,39 +161,6 @@ function formatNumber(num) {
   }
 }
 
-var i = 0;
-
-function progressNumberThree() {
-  if (i == 0) {
-    i = 1;
-    var getProgressIdThird = document.getElementById("number-progress-three");
-    var length = 7900;
-    getProgressIdThird.innerHTML = numberFormatThird(length);
-    var id = setInterval(frame, 0);
-
-    function frame() {
-      if (length >= 8000) {
-        clearInterval(id);
-      } else {
-        length++;
-        getProgressIdThird.innerHTML = numberFormatThird(length);
-      }
-    }
-  }
-}
-progressNumberThree();
-function numberFormatThird(num) {
-  var numStr = num.toString();
-  var length = numStr.length;
-
-  if (length <= 2) {
-    return numStr;
-  } else if (length <= 5) {
-    return numStr.substr(0, length - 3) + "," + numStr.substr(length - 3);
-  } else {
-    return;
-  }
-}
 function toggleClickOne() {
   let FaqVarFirst = document.getElementById("answerOne");
   if (FaqVarFirst.style.display == "block") {
@@ -329,60 +257,146 @@ function toggleClickEight() {
     document.getElementById("opensvg-8").style.display = "none";
   }
 }
-const getProgress = false;
-if (getProgress !== true) {
-  function logWindowOffset() {
-    const offsetY = window.scrollY;
-    console.log("Window Offset Y:", offsetY);
-    if (offsetY < 1050) {
-      var i = 0;
-      function progressNumOne() {
-        if (i == 0) {
-          i = 1;
-          var getProgressId = document.getElementById("number-progress-one");
-          var length = 49999920;
-          getProgressId.innerHTML = formatNumber(length);
-          var id = setInterval(frame, 10);
-          function frame() {
-            if (length >= 50000000) {
-              clearInterval(id);
-            } else {
-              length++;
-              getProgressId.innerHTML = formatNumber(length);
-            }
-          }
-        }
-      }
-      progressNumOne();
-    }
-  }
-  if (typeof window !== window) {
-    window.addEventListener("scroll", logWindowOffset);
-  }
-}
-function pageLoadViewPort() {
-  const newoffsetY = window.scrollY;
-  if (newoffsetY > 1250) {
-    var i = 0;
-    function progressNumOne() {
-      if (i == 0) {
-        i = 1;
-        var getProgressId = document.getElementById("number-progress-one");
-        var length = 49999920;
-        getProgressId.innerHTML = formatNumber(length);
-        var id = setInterval(frame, 10);
-        function frame() {
-          if (length >= 50000000) {
-            clearInterval(id);
-          } else {
-            length++;
-            getProgressId.innerHTML = formatNumber(length);
-          }
-        }
+
+function progressNumberWithDuration(getProgressId, durationMs, finalValue) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 25);
+
+    var id = setInterval(frame, 15);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressId.innerHTML = formatNumber(Math.round(initialValue));
       }
     }
-    progressNumOne();
-    console.log(newoffsetY, "get the portview");
   }
 }
-pageLoadViewPort();
+
+function handleInter(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressId = document.getElementById("number-progress-one");
+      progressNumberWithDuration(getProgressId, 2000, 50000000);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValue() {
+  if (initialLoadValue) {
+    initialLoadValue = false;
+    const targetElement = document.getElementById("number-progress-one");
+    const observer = new IntersectionObserver(handleInter);
+    observer.observe(targetElement);
+  }
+}
+
+window.addEventListener("scroll", portViewValue);
+
+
+
+
+function progressNumberWithDurationSec(getProgressIdSec, durationMs, finalValue) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 20);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdSec.innerHTML = formatNumber(Math.round(initialValue));
+      }
+    }
+  }
+}
+
+function handleInterSec(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdSec = document.getElementById("number-progress-two");
+      progressNumberWithDurationSec(getProgressIdSec, 2000, 50000000);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueSec() {
+  if (initialLoadValueSec) {
+    initialLoadValueSec = false;
+    const targetElementSec = document.getElementById("number-progress-two");
+    const observer = new IntersectionObserver(handleInterSec);
+    observer.observe(targetElementSec);
+  }
+}
+
+window.addEventListener("scroll", portViewValueSec);
+
+
+
+function numberFormatThird(num) {
+  var numStr = num.toString();
+  var length = numStr.length;
+
+  if (length <= 2) {
+    return numStr;
+  } else if (length <= 5) {
+    return numStr.substr(0, length - 3) + "," + numStr.substr(length - 3);
+  } else {
+    return;
+  }
+}
+
+function progressNumberWithDurationThird(getProgressIdThird, durationMs, finalValue) {
+  var i = 0;
+  if (i == 0) {
+    i = 1;
+    var initialValue = 0;
+    var step = (finalValue - initialValue) / (durationMs / 20);
+
+    var id = setInterval(frame, 10);
+
+    function frame() {
+      if (initialValue >= finalValue) {
+        clearInterval(id);
+      } else {
+        initialValue += step;
+        getProgressIdThird.innerHTML = numberFormatThird(Math.round(initialValue));
+      }
+    }
+  }
+}
+
+function handleInterThird(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const getProgressIdThird = document.getElementById("number-progress-three");
+      progressNumberWithDurationThird(getProgressIdThird, 2000, 8000);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+function portViewValueThird() {
+  if (initialLoadValueThird) {
+    initialLoadValueThird = false;
+    const targetElementThird = document.getElementById("number-progress-three");
+    const observer = new IntersectionObserver(handleInterThird);
+    observer.observe(targetElementThird);
+  }
+}
+
+window.addEventListener("scroll", portViewValueThird);
+progressNumberThree();
+
