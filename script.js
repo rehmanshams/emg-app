@@ -141,33 +141,33 @@ function leaveContainerVideo() {
 // }
 // var i = 0;
 
-// function prograssNumOne() {
+// function progressNumOne() {
 //   if (i == 0) {
 //     i = 1;
-//     var getPrograssId = document.getElementById("number-progress-one");
+//     var getProgressId = document.getElementById("number-progress-one");
 //     var length = 49999920;
-//     getPrograssId.innerHTML = formatNumber(length);
+//     getProgressId.innerHTML = formatNumber(length);
 //     var id = setInterval(frame, 0);
 //     function frame() {
 //       if (length >= 50000000) {
 //         clearInterval(id);
 //       } else {
 //         length++;
-//         getPrograssId.innerHTML = formatNumber(length);
+//         getProgressId.innerHTML = formatNumber(length);
 //       }
 //     }
 //   }
 // }
 
-// prograssNumOne();
+// progressNumOne();
 var i = 0;
 
-function prograssNumberTwo() {
+function progressNumberTwo() {
   if (i == 0) {
     i = 1;
-    var getPrograssIdSec = document.getElementById("number-progress-two");
+    var getProgressIdSec = document.getElementById("number-progress-two");
     var length = 49999900;
-    getPrograssIdSec.innerHTML = formatNumber(length);
+    getProgressIdSec.innerHTML = formatNumber(length);
     var id = setInterval(frame, 0);
 
     function frame() {
@@ -175,12 +175,12 @@ function prograssNumberTwo() {
         clearInterval(id);
       } else {
         length++;
-        getPrograssIdSec.innerHTML = formatNumber(length);
+        getProgressIdSec.innerHTML = formatNumber(length);
       }
     }
   }
 }
-prograssNumberTwo();
+progressNumberTwo();
 function formatNumber(num) {
   var numStr = num.toString();
   var length = numStr.length;
@@ -202,12 +202,12 @@ function formatNumber(num) {
 
 var i = 0;
 
-function prograssNumberThree() {
+function progressNumberThree() {
   if (i == 0) {
     i = 1;
-    var getPrograssIdThird = document.getElementById("number-progress-three");
+    var getProgressIdThird = document.getElementById("number-progress-three");
     var length = 7900;
-    getPrograssIdThird.innerHTML = numberFormatThird(length);
+    getProgressIdThird.innerHTML = numberFormatThird(length);
     var id = setInterval(frame, 0);
 
     function frame() {
@@ -215,12 +215,12 @@ function prograssNumberThree() {
         clearInterval(id);
       } else {
         length++;
-        getPrograssIdThird.innerHTML = numberFormatThird(length);
+        getProgressIdThird.innerHTML = numberFormatThird(length);
       }
     }
   }
 }
-prograssNumberThree();
+progressNumberThree();
 function numberFormatThird(num) {
   var numStr = num.toString();
   var length = numStr.length;
@@ -331,58 +331,58 @@ function toggleClickEight() {
 }
 
 function logWindowOffset() {
-  
   const offsetY = window.scrollY;
-  console.log(offsetY)
-  if (offsetY == 1050) {
+  console.log("Window Offset Y:", offsetY);
+  
+  if (offsetY < 1050) {
     console.log("get the viewport");
     var i = 0;
-    function prograssNumOne() {
+    function progressNumOne() {
       if (i == 0) {
         i = 1;
-        var getPrograssId = document.getElementById("number-progress-one");
+        var getProgressId = document.getElementById("number-progress-one");
         var length = 49999920;
-        getPrograssId.innerHTML = formatNumber(length);
+        getProgressId.innerHTML = formatNumber(length);
         var id = setInterval(frame, 10);
         function frame() {
           if (length >= 50000000) {
             clearInterval(id);
           } else {
             length++;
-            getPrograssId.innerHTML = formatNumber(length);
+            getProgressId.innerHTML = formatNumber(length);
           }
         }
       }
     }
-    prograssNumOne();
+    progressNumOne();
   }
 }
 if (typeof window !== window) {
   window.addEventListener("scroll", logWindowOffset);
 }
-function newviewport() {
+function pageLoadViewPort() {
   const newoffsetY = window.scrollY;
-  if (newoffsetY > 1050) {
+  if (newoffsetY > 1250) {
     var i = 0;
-    function prograssNumOne() {
+    function progressNumOne() {
       if (i == 0) {
         i = 1;
-        var getPrograssId = document.getElementById("number-progress-one");
+        var getProgressId = document.getElementById("number-progress-one");
         var length = 49999920;
-        getPrograssId.innerHTML = formatNumber(length);
+        getProgressId.innerHTML = formatNumber(length);
         var id = setInterval(frame, 10);
         function frame() {
           if (length >= 50000000) {
             clearInterval(id);
           } else {
             length++;
-            getPrograssId.innerHTML = formatNumber(length);
+            getProgressId.innerHTML = formatNumber(length);
           }
         }
       }
     }
-    prograssNumOne();
+    progressNumOne();
     console.log(newoffsetY, "get the portview");
   }
 }
-newviewport();
+pageLoadViewPort();
