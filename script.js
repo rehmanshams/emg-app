@@ -331,10 +331,7 @@ function toggleClickEight() {
 }
 
 function logWindowOffset() {
-  const offsetX = window.scrollX;
   const offsetY = window.scrollY;
-  console.log("Window Offset X:", offsetX);
-  console.log("Window Offset Y:", offsetY);
   if (offsetY < 1050 || offsetY > 2500) {
     console.log("get the viewport");
     var i = 0;
@@ -359,8 +356,6 @@ function logWindowOffset() {
   }
 }
 if (typeof window !== window) {
-  // Add event listener to check the window offset when the page is scrolled
-  // window.onload()
   window.addEventListener("scroll", logWindowOffset);
 }
 function newviewport() {
