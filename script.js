@@ -329,34 +329,36 @@ function toggleClickEight() {
     document.getElementById("opensvg-8").style.display = "none";
   }
 }
-function logWindowOffset() {
-  const offsetY = window.scrollY;
-  console.log("Window Offset Y:", offsetY);
-  if (offsetY < 1050) {
-    console.log("get the viewport");
-    var i = 0;
-    function progressNumOne() {
-      if (i == 0) {
-        i = 1;
-        var getProgressId = document.getElementById("number-progress-one");
-        var length = 49999920;
-        getProgressId.innerHTML = formatNumber(length);
-        var id = setInterval(frame, 10);
-        function frame() {
-          if (length >= 50000000) {
-            clearInterval(id);
-          } else {
-            length++;
-            getProgressId.innerHTML = formatNumber(length);
+const getProgress = false;
+if (getProgress !== true) {
+  function logWindowOffset() {
+    const offsetY = window.scrollY;
+    console.log("Window Offset Y:", offsetY);
+    if (offsetY < 1050) {
+      var i = 0;
+      function progressNumOne() {
+        if (i == 0) {
+          i = 1;
+          var getProgressId = document.getElementById("number-progress-one");
+          var length = 49999920;
+          getProgressId.innerHTML = formatNumber(length);
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (length >= 50000000) {
+              clearInterval(id);
+            } else {
+              length++;
+              getProgressId.innerHTML = formatNumber(length);
+            }
           }
         }
       }
+      progressNumOne();
     }
-    progressNumOne();
   }
-}
-if (typeof window !== window) {
-  window.addEventListener("scroll", logWindowOffset);
+  if (typeof window !== window) {
+    window.addEventListener("scroll", logWindowOffset);
+  }
 }
 function pageLoadViewPort() {
   const newoffsetY = window.scrollY;
