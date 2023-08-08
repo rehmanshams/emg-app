@@ -331,8 +331,10 @@ function toggleClickEight() {
 }
 
 function logWindowOffset() {
+  
   const offsetY = window.scrollY;
-  if (offsetY < 1050 || offsetY > 2500) {
+  console.log(offsetY)
+  if (offsetY == 1050) {
     console.log("get the viewport");
     var i = 0;
     function prograssNumOne() {
