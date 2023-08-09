@@ -217,17 +217,17 @@
                     </div>
                   </div>
                   <div class="relative flex justify-center">
+                    <!-- onmouseenter="hoverImagePause()"
+                    onmouseleave="leaveContainerVideo()" -->
                     <div
-                      onmouseenter="hoverImagePause()"
-                      onmouseleave="leaveContainerVideo()"
                       class="video-container"
                     >
                       <img src="./images/tv-image.png" />
-                      <video id="video-id" width="670" height="430">
+                      <video id="video-id" width="670" height="430" autoplay muted>
                         <source src="./video/video.mp4" type="video/ogg" />
                         Video is Loading...
                       </video>
-                      <div class="button-classes">
+                      <!--<div class="button-classes">
                         <button
                           class="absolute w-12 h-12"
                           onclick="togglePlayPause()"
@@ -238,7 +238,7 @@
                           />
                           <img id="play-pause-icon" />
                         </button>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>

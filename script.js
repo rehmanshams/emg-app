@@ -1,4 +1,3 @@
-const video = document.getElementById("video-id");
 const myImage = document.getElementById("play-pause-icon");
 let initialLoadValue = true;
 let initialLoadValueSec = true;
@@ -13,24 +12,32 @@ let initialLoadValueAudioMarketVehicle = true;
 let initialLoadValueAudioCunsumeMusic = true;
 let initialLoadValueAudioCunsumeSupport = true;
 
-function togglePlayPause() {
-  if (video.paused) {
-    video.play();
-    document.getElementById("hidden-play-button").style.display = "none";
-    myImage.src = "./images/pause_circle_icon.png";
-  } else {
-    video.pause();
-    myImage.src = "./images/player_icon.png";
-  }
-}
-function hoverImagePause() {
-  if (video.paused) return;
-  myImage.src = "./images/pause_circle_icon.png";
-}
-function leaveContainerVideo() {
-  if (video.paused) return;
-  myImage.src = "";
-}
+// var getVideoId = document.getElementById("video-id");
+// function getAutoPlay() {
+//   if (getVideoId.autoplay == false) {
+//     getVideoId.autoplay = true;
+//     getVideoId.load();
+//   }
+// }
+// getAutoPlay();
+// function togglePlayPause() {
+//   if (video.paused) {
+//     video.play();
+//     document.getElementById("hidden-play-button").style.display = "none";
+//     myImage.src = "./images/pause_circle_icon.png";
+//   } else {
+//     video.pause();
+//     myImage.src = "./images/player_icon.png";
+//   }
+// }
+// function hoverImagePause() {
+//   if (video.paused) return;
+//   myImage.src = "./images/pause_circle_icon.png";
+// }
+// function leaveContainerVideo() {
+//   if (video.paused) return;
+//   myImage.src = "";
+// }
 // const faqData = [
 //   {
 //     id: 1,
@@ -477,7 +484,6 @@ function numberFormatCtvCamp(num) {
   }
 }
 
-
 function progressNumberWithDurationCtvDealerShip(
   getProgressIdCtvDealerShip,
   durationMs,
@@ -510,16 +516,22 @@ function handleInterCtvDealerShip(entries, observer) {
       const getProgressIdCtvDealerShip = document.getElementById(
         "ctv-facts-dealerships"
       );
-      progressNumberWithDurationCtvDealerShip(getProgressIdCtvDealerShip, 2000, 47);
+      progressNumberWithDurationCtvDealerShip(
+        getProgressIdCtvDealerShip,
+        2000,
+        47
+      );
       observer.unobserve(entry.target);
     }
   });
 }
 
 function portViewValueCtvDealerShip() {
-  if (initialLoadValueCtvDealerShip   ) {
-    initialLoadValueCtvDealerShip    = false;
-    const targetElementCtvDealerShip = document.getElementById("ctv-facts-dealerships");
+  if (initialLoadValueCtvDealerShip) {
+    initialLoadValueCtvDealerShip = false;
+    const targetElementCtvDealerShip = document.getElementById(
+      "ctv-facts-dealerships"
+    );
     const observer = new IntersectionObserver(handleInterCtvDealerShip);
     observer.observe(targetElementCtvDealerShip);
   }
@@ -536,12 +548,17 @@ function numberFormatCtvDealerShip(num) {
   } else if (length <= 4) {
     return numStr.substr(0, 1) + "." + numStr.substr(1);
   } else if (length <= 7) {
-    return numStr.substr(0, length - 6) + "." + numStr.substr(length - 6, 3) + "." + numStr.substr(length - 3);
+    return (
+      numStr.substr(0, length - 6) +
+      "." +
+      numStr.substr(length - 6, 3) +
+      "." +
+      numStr.substr(length - 3)
+    );
   } else {
     return;
   }
 }
-
 
 function progressNumberWithDurationCtvDealerShipFirst(
   getProgressIdCtvDealerShipFirst,
@@ -561,9 +578,8 @@ function progressNumberWithDurationCtvDealerShipFirst(
         clearInterval(id);
       } else {
         initialValue += step;
-        getProgressIdCtvDealerShipFirst.innerHTML = numberFormatCtvDealerShipFirst(
-          Math.round(initialValue)
-        );
+        getProgressIdCtvDealerShipFirst.innerHTML =
+          numberFormatCtvDealerShipFirst(Math.round(initialValue));
       }
     }
   }
@@ -575,16 +591,22 @@ function handleInterCtvDealerShipFirst(entries, observer) {
       const getProgressIdCtvDealerShipFirst = document.getElementById(
         "ctv-facts-dealerships-one"
       );
-      progressNumberWithDurationCtvDealerShipFirst(getProgressIdCtvDealerShipFirst, 2000, 115);
+      progressNumberWithDurationCtvDealerShipFirst(
+        getProgressIdCtvDealerShipFirst,
+        2000,
+        115
+      );
       observer.unobserve(entry.target);
     }
   });
 }
 
 function portViewValueCtvDealerShipFirst() {
-  if (initialLoadValueCtvDealerShipFirst   ) {
-    initialLoadValueCtvDealerShipFirst    = false;
-    const targetElementCtvDealerShipFirst = document.getElementById("ctv-facts-dealerships-one");
+  if (initialLoadValueCtvDealerShipFirst) {
+    initialLoadValueCtvDealerShipFirst = false;
+    const targetElementCtvDealerShipFirst = document.getElementById(
+      "ctv-facts-dealerships-one"
+    );
     const observer = new IntersectionObserver(handleInterCtvDealerShipFirst);
     observer.observe(targetElementCtvDealerShipFirst);
   }
@@ -600,12 +622,16 @@ function numberFormatCtvDealerShipFirst(num) {
   } else if (length <= 4) {
     return numStr.substr(0, 1) + numStr.substr(1) + "M+";
   } else if (length <= 7) {
-    return numStr.substr(0, length - 6) + numStr.substr(length - 6, 3) + numStr.substr(length - 3) + "M+";
+    return (
+      numStr.substr(0, length - 6) +
+      numStr.substr(length - 6, 3) +
+      numStr.substr(length - 3) +
+      "M+"
+    );
   } else {
     return;
   }
 }
-
 
 function progressNumberWithDurationCtvHouseHolds(
   getProgressIdCtvHouseHolds,
@@ -639,16 +665,22 @@ function handleInterCtvHouseHolds(entries, observer) {
       const getProgressIdCtvHouseHolds = document.getElementById(
         "ctv-facts-households"
       );
-      progressNumberWithDurationCtvHouseHolds(getProgressIdCtvHouseHolds, 2000, 90);
+      progressNumberWithDurationCtvHouseHolds(
+        getProgressIdCtvHouseHolds,
+        2000,
+        90
+      );
       observer.unobserve(entry.target);
     }
   });
 }
 
 function portViewValueCtvHouseHold() {
-  if (initialLoadValueCtHouseHolds   ) {
-    initialLoadValueCtHouseHolds    = false;
-    const targetElementCtvHouseHold = document.getElementById("ctv-facts-households");
+  if (initialLoadValueCtHouseHolds) {
+    initialLoadValueCtHouseHolds = false;
+    const targetElementCtvHouseHold = document.getElementById(
+      "ctv-facts-households"
+    );
     const observer = new IntersectionObserver(handleInterCtvHouseHolds);
     observer.observe(targetElementCtvHouseHold);
   }
@@ -664,12 +696,16 @@ function numberFormatCtvHouseHolds(num) {
   } else if (length <= 4) {
     return numStr.substr(0, 1) + numStr.substr(1) + "%";
   } else if (length <= 7) {
-    return numStr.substr(0, length - 6) + numStr.substr(length - 6, 3) + numStr.substr(length - 3) + "%";
+    return (
+      numStr.substr(0, length - 6) +
+      numStr.substr(length - 6, 3) +
+      numStr.substr(length - 3) +
+      "%"
+    );
   } else {
     return;
   }
 }
-
 
 function progressNumberWithDurationCtvCampsSec(
   getProgressIdCtvCampsSec,
@@ -710,16 +746,17 @@ function handleInterCtvCampsSec(entries, observer) {
 }
 
 function portViewValueCtvCampsSec() {
-  if (initialLoadValueCtvCampSec   ) {
-    initialLoadValueCtvCampSec    = false;
-    const targetElementCtvCampsSec = document.getElementById("ctv-facts-campaings-sec");
+  if (initialLoadValueCtvCampSec) {
+    initialLoadValueCtvCampSec = false;
+    const targetElementCtvCampsSec = document.getElementById(
+      "ctv-facts-campaings-sec"
+    );
     const observer = new IntersectionObserver(handleInterCtvCampsSec);
     observer.observe(targetElementCtvCampsSec);
   }
 }
 
 window.addEventListener("scroll", portViewValueCtvCampsSec);
-
 
 function progressNumberWithDurationAudioMarketStream(
   getProgressIdAudioMarketStream,
@@ -739,9 +776,8 @@ function progressNumberWithDurationAudioMarketStream(
         clearInterval(id);
       } else {
         initialValue += step;
-        getProgressIdAudioMarketStream.innerHTML = numberFormatCtvDealerShipFirst(
-          Math.round(initialValue)
-        );
+        getProgressIdAudioMarketStream.innerHTML =
+          numberFormatCtvDealerShipFirst(Math.round(initialValue));
       }
     }
   }
@@ -753,23 +789,27 @@ function handleInterAudioMarketStream(entries, observer) {
       const getProgressIdAudioMarketStream = document.getElementById(
         "audio-streaming-users"
       );
-      progressNumberWithDurationAudioMarketStream(getProgressIdAudioMarketStream, 2000, 228);
+      progressNumberWithDurationAudioMarketStream(
+        getProgressIdAudioMarketStream,
+        2000,
+        228
+      );
       observer.unobserve(entry.target);
     }
   });
 }
 
 function portViewValueAudioMarketStream() {
-  if (initialLoadValueAudioMarketStream   ) {
-    initialLoadValueAudioMarketStream    = false;
-    const targetElementAudioMarketStream = document.getElementById("audio-streaming-users");
+  if (initialLoadValueAudioMarketStream) {
+    initialLoadValueAudioMarketStream = false;
+    const targetElementAudioMarketStream = document.getElementById(
+      "audio-streaming-users"
+    );
     const observer = new IntersectionObserver(handleInterAudioMarketStream);
     observer.observe(targetElementAudioMarketStream);
   }
 }
 window.addEventListener("scroll", portViewValueAudioMarketStream);
-
-
 
 function progressNumberWithDurationAudioMarketVehicle(
   getProgressIdAudioMarketVehicle,
@@ -789,9 +829,8 @@ function progressNumberWithDurationAudioMarketVehicle(
         clearInterval(id);
       } else {
         initialValue += step;
-        getProgressIdAudioMarketVehicle.innerHTML = numberFormatAudioMarketVehicle(
-          Math.round(initialValue)
-        );
+        getProgressIdAudioMarketVehicle.innerHTML =
+          numberFormatAudioMarketVehicle(Math.round(initialValue));
       }
     }
   }
@@ -803,16 +842,22 @@ function handleInterAudioMarketVehicle(entries, observer) {
       const getProgressIdAudioMarketVehicle = document.getElementById(
         "audio-streaming-vehicle"
       );
-      progressNumberWithDurationAudioMarketVehicle(getProgressIdAudioMarketVehicle, 2000, 31);
+      progressNumberWithDurationAudioMarketVehicle(
+        getProgressIdAudioMarketVehicle,
+        2000,
+        31
+      );
       observer.unobserve(entry.target);
     }
   });
 }
 
 function portViewValueAudioMarketVehicle() {
-  if (initialLoadValueAudioMarketVehicle   ) {
-    initialLoadValueAudioMarketVehicle    = false;
-    const targetElementAudioMarketVehicle = document.getElementById("audio-streaming-vehicle");
+  if (initialLoadValueAudioMarketVehicle) {
+    initialLoadValueAudioMarketVehicle = false;
+    const targetElementAudioMarketVehicle = document.getElementById(
+      "audio-streaming-vehicle"
+    );
     const observer = new IntersectionObserver(handleInterAudioMarketVehicle);
     observer.observe(targetElementAudioMarketVehicle);
   }
@@ -827,12 +872,18 @@ function numberFormatAudioMarketVehicle(num) {
   } else if (length <= 4) {
     return numStr.substr(0, 1) + "." + numStr.substr(1) + "M+";
   } else if (length <= 7) {
-    return numStr.substr(0, length - 6) + "." + numStr.substr(length - 6, 3) + "." + numStr.substr(length - 3) + "M+";
+    return (
+      numStr.substr(0, length - 6) +
+      "." +
+      numStr.substr(length - 6, 3) +
+      "." +
+      numStr.substr(length - 3) +
+      "M+"
+    );
   } else {
     return;
   }
 }
-
 
 function progressNumberWithDurationAudioCunsumeMusic(
   getProgressIdAudioCunsumeMusic,
@@ -866,23 +917,28 @@ function handleInterAudioCunsumeMusic(entries, observer) {
       const getProgressIdAudioCunsumeMusic = document.getElementById(
         "audio-cunsume-music"
       );
-      progressNumberWithDurationAudioCunsumeMusic(getProgressIdAudioCunsumeMusic, 2000, 78);
+      progressNumberWithDurationAudioCunsumeMusic(
+        getProgressIdAudioCunsumeMusic,
+        2000,
+        78
+      );
       observer.unobserve(entry.target);
     }
   });
 }
 
 function portViewValueAudioCunsumeMusic() {
-  if (initialLoadValueAudioCunsumeMusic   ) {
-    initialLoadValueAudioCunsumeMusic    = false;
-    const targetElementAudioCunsumeMusic = document.getElementById("audio-cunsume-music");
+  if (initialLoadValueAudioCunsumeMusic) {
+    initialLoadValueAudioCunsumeMusic = false;
+    const targetElementAudioCunsumeMusic = document.getElementById(
+      "audio-cunsume-music"
+    );
     const observer = new IntersectionObserver(handleInterAudioCunsumeMusic);
     observer.observe(targetElementAudioCunsumeMusic);
   }
 }
 
 window.addEventListener("scroll", portViewValueAudioCunsumeMusic);
-
 
 function progressNumberWithDurationAudioCunsumeSupport(
   getProgressIdAudioCunsumeSupport,
@@ -916,16 +972,22 @@ function handleInterAudioCunsumeSupport(entries, observer) {
       const getProgressIdAudioCunsumeSupport = document.getElementById(
         "audio-cunsume-support"
       );
-      progressNumberWithDurationAudioCunsumeSupport(getProgressIdAudioCunsumeSupport, 2000, 53);
+      progressNumberWithDurationAudioCunsumeSupport(
+        getProgressIdAudioCunsumeSupport,
+        2000,
+        53
+      );
       observer.unobserve(entry.target);
     }
   });
 }
 
 function portViewValueAudioCunsumeSupport() {
-  if (initialLoadValueAudioCunsumeSupport   ) {
-    initialLoadValueAudioCunsumeSupport    = false;
-    const targetElementAudioCunsumeSupport = document.getElementById("audio-cunsume-support");
+  if (initialLoadValueAudioCunsumeSupport) {
+    initialLoadValueAudioCunsumeSupport = false;
+    const targetElementAudioCunsumeSupport = document.getElementById(
+      "audio-cunsume-support"
+    );
     const observer = new IntersectionObserver(handleInterAudioCunsumeSupport);
     observer.observe(targetElementAudioCunsumeSupport);
   }
