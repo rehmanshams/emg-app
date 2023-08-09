@@ -11,6 +11,38 @@
             borderRadius: {
               "1xl": "14px",
             },
+            textColor: {
+              coolWhite: "#FCFCFC",
+              lightBlue: "#1E71A3",
+              blueGray: "#465364",
+            },
+            borderColor: {
+              borderBlue: "#1E71A3",
+            },
+            fontSize: {
+              "4.5xl": "42px",
+              38: "38px",
+            },
+            gap: {
+              70: "70px",
+              90: "90px",
+              100: "100px",
+            },
+            lineHeight: {
+              72: "72px",
+              137: "137.5%",
+            },
+            letterSpacing: {
+              0.84: "-0.84px",
+            },
+            backgroundColor: {
+              bgLightBlue: "#1770A4",
+              blueGray: "#F2F7FA",
+              lightBlueSev: "#1E71A3"
+            },
+            padding: {
+              18: "18px",
+            },
           },
         },
       };
@@ -23,7 +55,7 @@
     <div class="w-full mx-auto">
       <div class="flex flex-col gap-[83px] mx-auto justify-center items-center">
         <div
-          class="flex justify-between items-center w-full max-w-[1200px] py-[38.8px]"
+          class="flex justify-between items-center second-container py-[38.8px]"
         >
           <div class="cursor-pointer">
             <a href="./index.html">
@@ -68,7 +100,7 @@
               Contact Us
             </p>
             <button
-              class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
+              class="uppercase primary-button text-coolWhite leading-normal items-center text-base font-semibold flex"
             >
               Get Started
               <svg
@@ -91,16 +123,16 @@
         </div>
         <div class="w-full flex flex-col gap-[150px]">
           <div class="second-container flex gap-[87px]">
-            <div class="flex flex-col gap-[14px]">
-              <div class="flex gap-[14px] items-center">
-                <hr class="border border-[#1E71A3] w-8 h-px" />
-                <p class="text-lg font-semibold text-[#1E71A3]">Channels</p>
+            <div class="flex flex-col gap-3.5">
+              <div class="flex gap-3.5 items-center">
+                <hr class="border border-borderBlue w-8 h-px" />
+                <p class="text-lg font-semibold text-lightBlue">Channels</p>
               </div>
-              <div class="flex flex-col gap-8 w-[512px]">
+              <div class="flex flex-col gap-8 w-full min-w-[512px]">
                 <p class="text-black text-7xl font-bold leading-normal">
                   Connected TV
                 </p>
-                <p class="text-[#212529] text-base font-normal leading-6">
+                <p class="text-gray-800 text-base font-normal leading-6">
                   For the first time in history, more households consume
                   television content on streaming services like Hulu, Max, and
                   Tubi than on cable TV. With more than 87 million households
@@ -118,18 +150,18 @@
           <div class="flex second-container gap-[39px]">
             <img src="./images/ctv-connecttv-image.png" />
             <div class="flex flex-col gap-12">
-              <p class="text-black text-[38px] font-bold">
+              <p class="text-black text-38 font-bold">
                 What Is Connected TV advertising?
               </p>
               <div class="flex flex-col gap-8">
-                <p class="text-[#212529] font-medium text-base leading-6">
+                <p class="text-gray-800 font-medium text-base leading-6">
                   CTV advertising refers to delivering targeted advertisements
                   to viewers who are streaming video content on
                   internet-connected devices such as smart TVs or streaming
                   devices like Roku and Apple TV. Non-skippable ads are served
                   before content or during traditional commercial breaks.
                 </p>
-                <p class="text-[#212529] font-medium text-base leading-6">
+                <p class="text-gray-800 font-medium text-base leading-6">
                   Connected TV refers to the television sets or devices that are
                   connected to the internet, allowing users to access streaming
                   services, video-on-demand platforms, and other digital
@@ -138,10 +170,10 @@
                   leverages internet connectivity to reach audiences
                 </p>
               </div>
-              <p class="text-black text-[38px] font-bold w-[400px]">
+              <p class="text-black text-38 font-bold w-full max-w-[400px]">
                 Why advertise on Connected TV?
               </p>
-              <p class="text-[#212529] font-medium text-base leading-6">
+              <p class="text-gray-800 font-medium text-base leading-6">
                 Connected TV advertising can help dealerships take advantage of
                 the growing popularity of streaming services and combat
                 cord-cutting trends. Retail automotive marketers need to reach
@@ -149,7 +181,7 @@
                 linear TV by re-engaging them with CTV ads. PMA?
               </p>
               <button
-                class="text-[#FCFCFC] transition-all ease-in-out duration-300 hover:opacity-90 text-base font-bold bg-[#1E71A3] flex gap-1 h-[52px] text-center px-8 w-[376px] rounded-1xl justify-center items-center"
+                class="text-coolWhite transition-all ease-in-out duration-300 hover:opacity-90 text-base font-bold bg-lightBlueSev flex gap-1 h-[52px] text-center px-8 w-full max-w-[376px] rounded-1xl justify-center items-center"
               >
                 Reach Auto-Intenders with CTV Ads
                 <svg
@@ -173,7 +205,7 @@
           <div
             class="ctv-map-bg flex justify-center items-center flex-col gap-[76px]"
           >
-            <p class="text-[#FCFCFC] text-[38px] font-bold leading-normal">
+            <p class="text-coolWhite text-38 font-bold leading-normal">
               CTV Facts & Stats USA
             </p>
             <div class="flex flex-col gap-12">
@@ -183,9 +215,9 @@
                 >
                   <p
                     id="ctv-facts-dealerships-one"
-                    class="text-[#FCFCFC] text-[42px] font-semibold leading-[72px] tracking-[-0.84px]"
+                    class="text-coolWhite text-4.5xl font-semibold leading-72 tracking-0.84"
                   ></p>
-                  <p class="text-2xl font-medium leading-8 text-[#FCFCFC]">
+                  <p class="text-2xl font-medium leading-8 text-coolWhite">
                     Tracked Dealerships Walk-ins
                   </p>
                 </div>
@@ -194,9 +226,9 @@
                 >
                   <p
                     id="ctv-facts-households"
-                    class="text-[#FCFCFC] text-[42px] font-semibold leading-[72px] tracking-[-0.84px]"
+                    class="text-coolWhite text-4.5xl font-semibold leading-72 tracking-0.84"
                   ></p>
-                  <p class="text-2xl font-medium leading-8 text-[#FCFCFC]">
+                  <p class="text-2xl font-medium leading-8 text-coolWhite">
                     Auto-Intender Households Reached
                   </p>
                 </div>
@@ -205,9 +237,9 @@
                 >
                   <p
                     id="ctv-facts-campaings"
-                    class="text-[#FCFCFC] text-[42px] font-semibold leading-[72px] tracking-[-0.84px]"
+                    class="text-coolWhite text-4.5xl font-semibold leading-72 tracking-0.84"
                   ></p>
-                  <p class="text-2xl font-medium leading-8 text-[#FCFCFC]">
+                  <p class="text-2xl font-medium leading-8 text-coolWhite">
                     Tier 2 and 3 Campaings Managed
                   </p>
                 </div>
@@ -218,9 +250,9 @@
                 >
                   <p
                     id="ctv-facts-dealerships"
-                    class="text-[#FCFCFC] text-[42px] font-semibold leading-[72px] tracking-[-0.84px]"
+                    class="text-coolWhite text-4.5xl font-semibold leading-72 tracking-0.84"
                   ></p>
-                  <p class="text-2xl font-medium leading-8 text-[#FCFCFC]">
+                  <p class="text-2xl font-medium leading-8 text-coolWhite">
                     Tracked Dealerships Walk-ins
                   </p>
                 </div>
@@ -229,9 +261,9 @@
                 >
                   <p
                     id="ctv-facts-campaings-sec"
-                    class="text-[#FCFCFC] text-[42px] font-semibold leading-[72px] tracking-[-0.84px]"
+                    class="text-coolWhite text-4.5xl font-semibold leading-72 tracking-0.84"
                   ></p>
-                  <p class="text-2xl font-medium leading-8 text-[#FCFCFC]">
+                  <p class="text-2xl font-medium leading-8 text-coolWhite">
                     Tier 2 and 3 Campaings Managed
                   </p>
                 </div>
@@ -239,9 +271,7 @@
             </div>
           </div>
           <div class="logos-bg flex justify-center gap-[176px] items-center">
-            <p
-              class="text-black text-[38px] font-bold leading-normal w-[375px]"
-            >
+            <p class="text-black text-38 font-bold leading-normal w-full max-w-[375px]">
               Leading Automotive Brands Choose us for CTV
             </p>
             <div class="grid grid-cols-4 gap-x-[120px] gap-y-6">
@@ -267,23 +297,23 @@
             <div
               class="min-w-[1319px] flex justify-end items-center gap-[65px]"
             >
-              <p class="text-black font-bold text-[38px] leading-normal">
+              <p class="text-black font-bold text-38 leading-normal">
                 The advantages of CTV with EMG
               </p>
               <div
-                class="w-full bg-[#F2F7FA] flex flex-col gap-8 rounded-l-[50px] pt-[55.5px] pl-12 pb-[66.5px]"
+                class="w-full bg-blueGray flex flex-col gap-8 rounded-l-[50px] pt-[55.5px] pl-12 pb-[66.5px]"
               >
                 <div class="flex gap-[47px]">
                   <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
                     01
                   </p>
-                  <div class="flex flex-col gap-3 w-[504px]">
+                  <div class="flex flex-col gap-3 w-full max-w-[504px]">
                     <p
                       class="text-neutral-800 font-bold leading-10 text-[31.5px]"
                     >
                       Performance
                     </p>
-                    <p class="text-[#212529] text-base font-normal leading-6">
+                    <p class="text-gray-800 text-base font-normal leading-6">
                       Through unparalleled efficiency, reach confirmed
                       auto-intenders for a fraction of the cost
                     </p>
@@ -293,13 +323,13 @@
                   <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
                     02
                   </p>
-                  <div class="flex flex-col gap-3 w-[504px]">
+                  <div class="flex flex-col gap-3 w-full max-w-[504px]">
                     <p
                       class="text-neutral-800 font-bold leading-10 text-[31.5px]"
                     >
                       Precision Targeting
                     </p>
-                    <p class="text-[#212529] text-base font-normal leading-6">
+                    <p class="text-gray-800 text-base font-normal leading-6">
                       Go way beyond demographic data and leverage our curated
                       auto-intender audiences based on 55M+ dealership walk-ins
                       over a 5 year period
@@ -310,13 +340,13 @@
                   <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
                     03
                   </p>
-                  <div class="flex flex-col gap-3 w-[504px]">
+                  <div class="flex flex-col gap-3 w-full max-w-[504px]">
                     <p
                       class="text-neutral-800 font-bold leading-10 text-[31.5px]"
                     >
                       Premium Inventory
                     </p>
-                    <p class="text-[#212529] text-base font-normal leading-6">
+                    <p class="text-gray-800 text-base font-normal leading-6">
                       Run ads on every ad supported streaming service including
                       sports and live events. Our inventory is sourced directly
                       from programmers and publishers, putting more media to
@@ -328,13 +358,13 @@
                   <p class="text-[#00C49C] text-[31.5px] font-bold leading-10">
                     04
                   </p>
-                  <div class="flex flex-col gap-3 w-[504px]">
+                  <div class="flex flex-col gap-3 w-full max-w-[504px]">
                     <p
                       class="text-neutral-800 font-bold leading-10 text-[31.5px]"
                     >
                       Measurement
                     </p>
-                    <p class="text-[#212529] text-base font-normal leading-6">
+                    <p class="text-gray-800 text-base font-normal leading-6">
                       Measure offline and online metrics including dealership
                       walk-ins, market share, and VDP views.
                     </p>
@@ -343,34 +373,34 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-[100px]">
-            <div class="w-full mx-auto flex flex-col gap-[100px]">
+          <div class="flex flex-col gap-100">
+            <div class="w-full mx-auto flex flex-col gap-100">
               <div class="car-name-logo-bg flex justify-center items-center">
                 <div class="flex flex-col gap-20 items-center">
-                  <p class="text-black text-[38px] font-bold leading-normal">
+                  <p class="text-black text-38 font-bold leading-normal">
                     Our connected TV Partners
                   </p>
                   <img src="./images/name-logo.png" />
                 </div>
               </div>
               <div
-                class="bg-[#F2F7FA] first-container flex justify-center py-[60px]"
+                class="bg-blueGray first-container flex justify-center py-[60px]"
               >
                 <div class="flex flex-col gap-8">
-                  <p class="text-black text-[38px] font-bold leading-normal">
+                  <p class="text-black text-38 font-bold leading-normal">
                     Recent highlights
                   </p>
                   <div class="flex gap-[30px]">
                     <div
-                      class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                      class="bg-bgLightBlue py-8 px-18 rounded-1xl w-full max-w-[278px] flex flex-col gap-9"
                     >
                       <p class="text-white font-semibold text-xl">
                         Cash App Pay available in US
                       </p>
-                      <div class="flex flex-col gap-[70px]">
+                      <div class="flex flex-col gap-70">
                         <div class="flex flex-col gap-2">
                           <p
-                            class="text-sm text-[#FCFCFC] font-light leading-5"
+                            class="text-sm text-coolWhite font-light leading-5"
                           >
                             Jun 7 • 2023
                           </p>
@@ -407,15 +437,15 @@
                       </div>
                     </div>
                     <div
-                      class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                      class="bg-bgLightBlue py-8 px-18 rounded-1xl w-full max-w-[278px] flex flex-col gap-9"
                     >
                       <p class="text-white font-semibold text-xl">
                         Introducing Stripe Reader S700
                       </p>
-                      <div class="flex flex-col gap-[70px]">
+                      <div class="flex flex-col gap-70">
                         <div class="flex flex-col gap-2">
                           <p
-                            class="text-sm text-[#FCFCFC] font-light leading-5"
+                            class="text-sm text-coolWhite font-light leading-5"
                           >
                             May 2 • 2023
                           </p>
@@ -452,17 +482,17 @@
                       </div>
                     </div>
                     <div
-                      class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                      class="bg-bgLightBlue py-8 px-18 rounded-1xl w-full max-w-[278px] flex flex-col gap-9"
                     >
                       <p
                         class="text-white font-semibold text-xl min-h-[63px] truncate"
                       >
                         2024 Honda CR-V Adds $37,645 Hybrid-Only Sport-L
                       </p>
-                      <div class="flex flex-col gap-[70px]">
+                      <div class="flex flex-col gap-70">
                         <div class="flex flex-col gap-2">
                           <p
-                            class="text-sm text-[#FCFCFC] font-light leading-5"
+                            class="text-sm text-coolWhite font-light leading-5"
                           >
                             Jun 7 • 2023
                           </p>
@@ -499,17 +529,17 @@
                       </div>
                     </div>
                     <div
-                      class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                      class="bg-bgLightBlue py-8 px-18 rounded-1xl w-full max-w-[278px] flex flex-col gap-9"
                     >
                       <p
                         class="text-white font-semibold text-xl min-h-[63px] truncate"
                       >
                         1963 Chevy Impala Z11 Lightweight Is Our BaT Pick
                       </p>
-                      <div class="flex flex-col gap-[70px]">
+                      <div class="flex flex-col gap-70">
                         <div class="flex flex-col gap-2">
                           <p
-                            class="text-sm text-[#FCFCFC] font-light leading-5"
+                            class="text-sm text-coolWhite font-light leading-5"
                           >
                             Jun 7 • 2023
                           </p>
@@ -549,7 +579,7 @@
                 </div>
               </div>
               <div class="second-container flex flex-col gap-[62px]">
-                <p class="text-black text-[38px] font-bold leading-normal">
+                <p class="text-black text-38 font-bold leading-normal">
                   Frequently Asked Question
                 </p>
                 <div class="flex flex-col gap-8">
@@ -988,16 +1018,16 @@
               </div>
             </div>
             <div
-              class="py-[42px] bg-[#F2F7FA] flex justify-center first-container"
+              class="py-[42px] bg-blueGray flex justify-center first-container"
             >
               <div class="flex flex-col gap-[55px] second-container">
                 <div class="flex items-center gap-[125px]">
                   <div class="flex flex-col gap-8">
                     <img
-                      class="h-12 w-[118px]"
+                      class="h-12 w-full max-w-[118px]"
                       src="./images/footer-logo.png"
                     />
-                    <div class="flex flex-col w-full max-w-[163px] gap-6">
+                    <div class="flex flex-col w-full  max-w-[163px] gap-6">
                       <p
                         class="text-neutral-800 text-lg leading-normal font-medium"
                       >
@@ -1006,12 +1036,12 @@
                       <nav>
                         <ul class="flex flex-col gap-6">
                           <li
-                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Phone: (949) 669-5724
                           </li>
                           <li
-                            class="cursor-pointer w-[163px] text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="cursor-pointer w-full  max-w-[163px] text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Address: 400 Spectrum Center Dr Suite <br />19-199,
                             Irvine, CA 92618
@@ -1039,7 +1069,7 @@
                     </div>
                   </div>
 
-                  <div class="flex gap-[90px] mt-16">
+                  <div class="flex gap-90 w-full max-w-[624px] mt-16">
                     <div class="flex flex-col gap-6 w-full max-w-[114px]">
                       <p
                         class="text-neutral-800 text-lg leading-normal font-medium"
@@ -1049,22 +1079,22 @@
                       <nav>
                         <ul class="flex flex-col gap-6">
                           <li
-                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Planing
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Audience
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Measurement
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Reporting
                           </li>
@@ -1080,12 +1110,12 @@
                       <nav>
                         <ul class="flex flex-col gap-6">
                           <li
-                            class="text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             <a href="./ctv.html"> CTV </a>
                           </li>
                           <li
-                            class="text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             <a href="./audio.html"> Audio </a>
                           </li>
@@ -1101,17 +1131,17 @@
                       <nav>
                         <ul class="flex flex-col gap-6">
                           <li
-                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Case Studies
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Creative Hub
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Gloassary
                           </li>
@@ -1127,17 +1157,17 @@
                       <nav>
                         <ul class="flex flex-col gap-6">
                           <li
-                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             About
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Partners
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Careers
                           </li>
@@ -1154,12 +1184,12 @@
                     </p>
                     <div class="flex gap-8 items-center">
                       <p
-                        class="cursor-pointer text-[#465364] text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                        class="cursor-pointer text-blueGray text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                       >
                         Creative Specifications
                       </p>
                       <p
-                        class="cursor-pointer text-[#465364] text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                        class="cursor-pointer text-blueGray text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                       >
                         Privacy Policy
                       </p>

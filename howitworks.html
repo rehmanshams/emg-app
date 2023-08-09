@@ -11,6 +11,32 @@
             borderRadius: {
               "1xl": "14px",
             },
+            textColor: {
+              coolWhite: "#FCFCFC",
+              lightBlue: "#1E71A3",
+              blueGray: "#465364",
+            },
+            borderColor: {
+              borderBlue: "#1E71A3",
+            },
+            fontSize: {
+              "4.5xl": "42px",
+              38: "38px",
+            },
+            gap: {
+              90: "90px",
+              100: "100px",
+            },
+            lineHeight: {
+              30: "30px",
+              72: "72px",
+              137: "137.5%",
+            },
+            backgroundColor: {
+              bgLightBlue: "#1770A4",
+              blueGray: "#F2F7FA",
+              lightBlueSev: "#1E71A3",
+            },
           },
         },
       };
@@ -23,7 +49,7 @@
     <div class="first-container mx-auto">
       <div class="flex flex-col gap-[83px] justify-center items-center">
         <div
-          class="flex justify-between items-center w-full max-w-[1200px] py-[38.8px]"
+          class="flex justify-between items-center second-container py-[38.8px]"
         >
           <div class="cursor-pointer">
             <a href="./index.html">
@@ -68,7 +94,7 @@
               Contact Us
             </p>
             <button
-              class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
+              class="uppercase primary-button text-coolWhite leading-normal items-center text-base font-semibold flex"
             >
               Get Started
               <svg
@@ -90,16 +116,14 @@
           </div>
         </div>
         <div class="first-container">
-          <div class="flex flex-col gap-[100px] w-full">
+          <div class="flex flex-col gap-100 w-full">
             <div class="flex flex-col gap-20 second-container">
               <div class="flex flex-col gap-[54px] items-center">
                 <p
                   class="text-black text-[72px] leading-[80px] text-center font-bold w-full max-w-[1122px]"
                 >
                   Reach Auto-Intenders 8.5x More Efficiently With
-                  <span class="border-b-4 border-[#1E71A3]">
-                    Streaming
-                  </span>
+                  <span class="border-b-4 border-borderBlue"> Streaming </span>
                 </p>
                 <div
                   class="flex flex-col items-center text-white text-base font-semibold gap-8"
@@ -112,7 +136,7 @@
                     results with absolute confidence.
                   </p>
                   <button
-                    class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
+                    class="uppercase primary-button text-coolWhite leading-normal items-center text-base font-semibold flex"
                   >
                     Get Started
                     <svg
@@ -138,23 +162,21 @@
               </div>
             </div>
             <div class="howitworks-bg py-[90px] flex flex-col gap-[170px]">
-              <div class="second-container flex flex-col gap-[14px]">
+              <div class="second-container flex flex-col gap-3.5">
                 <div class="flex flex-col gap-[52px]">
-                  <div class="flex flex-col gap-[14px]">
-                    <div class="flex gap-[14px] items-center">
-                      <hr class="border border-[#1E71A3] w-8 h-px" />
-                      <p class="text-lg font-semibold text-[#1E71A3]">
+                  <div class="flex flex-col gap-3.5">
+                    <div class="flex gap-3.5 items-center">
+                      <hr class="border border-borderBlue w-8 h-px" />
+                      <p class="text-lg font-semibold text-lightBlue">
                         How It Works
                       </p>
                     </div>
                     <div class="flex flex-col gap-8 w-[818px]">
-                      <p
-                        class="text-black text-[38px] font-bold leading-normal"
-                      >
+                      <p class="text-black text-38 font-bold leading-normal">
                         End-to-End streaming Adversing Solution for Automotive
                         Brands
                       </p>
-                      <p class="text-[#212529] text-base font-normal leading-6">
+                      <p class="text-gray-800 text-base font-normal leading-6">
                         For the first time in history, more households consume
                         television content on streaming services like Hulu, Max,
                         and Tubi than on cable TV. With more than 87 million
@@ -167,64 +189,54 @@
                     <img src="/images/howitoworks-streaming-solution.png" />
                     <div class="flex gap-[52px]">
                       <div class="flex flex-col gap-2 w-full max-w-[198px]">
-                        <p
-                          class="text-gray-900 font-medium leading-[30px] text-xl"
-                        >
+                        <p class="text-gray-900 font-medium leading-30 text-xl">
                           Dealership Campaign Planning
                         </p>
                         <p
-                          class="text-[#212529] text-base leading-6 font-normal"
+                          class="text-gray-800 text-base leading-6 font-normal"
                         >
                           Generate custom, dealership level proposals based on
                           thousands of streaming campaing
                         </p>
                       </div>
                       <div class="flex flex-col gap-2 w-full max-w-[198px]">
-                        <p
-                          class="text-gray-900 font-medium leading-[30px] text-xl"
-                        >
+                        <p class="text-gray-900 font-medium leading-30 text-xl">
                           Audience Targeting & Channels
                         </p>
                         <p
-                          class="text-[#212529] text-base leading-6 font-normal"
+                          class="text-gray-800 text-base leading-6 font-normal"
                         >
                           Chose from finely curated auto-intender audiences
                           based on 55+ dealership walk-ins
                         </p>
                       </div>
                       <div class="flex flex-col gap-2 w-full max-w-[198px]">
-                        <p
-                          class="text-gray-900 font-medium leading-[30px] text-xl"
-                        >
+                        <p class="text-gray-900 font-medium leading-30 text-xl">
                           Launch Campaign
                         </p>
                         <p
-                          class="text-[#212529] text-base leading-6 font-normal"
+                          class="text-gray-800 text-base leading-6 font-normal"
                         >
                           Upload creative and determine budget
                         </p>
                       </div>
                       <div class="flex flex-col gap-2 w-full max-w-[198px]">
-                        <p
-                          class="text-gray-900 font-medium leading-[30px] text-xl"
-                        >
+                        <p class="text-gray-900 font-medium leading-30 text-xl">
                           Measure Dealership Performance
                         </p>
                         <p
-                          class="text-[#212529] text-base leading-6 font-normal"
+                          class="text-gray-800 text-base leading-6 font-normal"
                         >
                           Track dealership walk-ins, marketshare, VDP views, and
                           more-all deterministic not probilistic
                         </p>
                       </div>
                       <div class="flex flex-col gap-2 w-full max-w-[198px]">
-                        <p
-                          class="text-gray-900 font-medium leading-[30px] text-xl"
-                        >
+                        <p class="text-gray-900 font-medium leading-30 text-xl">
                           Access Insightful Reporting
                         </p>
                         <p
-                          class="text-[#212529] text-base leading-6 font-normal"
+                          class="text-gray-800 text-base leading-6 font-normal"
                         >
                           Generate custom, dealership level proposals based on
                           thousands of streaming campaign
@@ -249,27 +261,27 @@
                       <div class="flex flex-col gap-10">
                         <div class="flex flex-col gap-4">
                           <p
-                            class="text-base text-[#212529] font-normal leading-6"
+                            class="text-base text-gray-800 font-normal leading-6"
                           >
                             Generate custom, dealership level proposals based on
                             thousands of streaming campaigns
                           </p>
                           <p
-                            class="text-base text-[#212529] font-normal leading-6"
+                            class="text-base text-gray-800 font-normal leading-6"
                           >
                             Proposals include optimal budget, ideal
                             geotargeting, audience guidance, and channel
                             allocation
                           </p>
                           <p
-                            class="text-base text-[#212529] font-normal leading-6"
+                            class="text-base text-gray-800 font-normal leading-6"
                           >
                             Stand on the shoulders of 5 years of learning and
                             optimizations
                           </p>
                         </div>
                         <button
-                          class="text-base font-bold uppercase leading-normal text-[#FCFCFC] h-[52px] justify-center flex gap-1 bg-[#1E71A3] rounded-1xl items-center transition-all ease-in-out duration-300 hover:opacity-90"
+                          class="text-base font-bold uppercase leading-normal text-coolWhite h-[52px] justify-center flex gap-1 bg-lightBlueSev rounded-1xl items-center transition-all ease-in-out duration-300 hover:opacity-90"
                         >
                           Generate Dealership Proposal
                           <svg
@@ -312,26 +324,26 @@
                           <div class="flex flex-col gap-10">
                             <div class="flex flex-col gap-4">
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Choose from curated EMG Auto Audiences based on
                                 55M+ dealership walk-ins
                               </p>
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Data partners include Polk, Experian, Cars.com,
                                 and Oracle Data Cloud
                               </p>
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Activate an omnichannel campaign by leveraging
                                 the same audience on CTV and Audio
                               </p>
                             </div>
                             <button
-                              class="text-base font-bold uppercase leading-normal text-[#FCFCFC] h-[52px] justify-center flex gap-1 bg-[#1E71A3] rounded-1xl items-center transition-all ease-in-out duration-300 hover:opacity-90"
+                              class="text-base font-bold uppercase leading-normal text-coolWhite h-[52px] justify-center flex gap-1 bg-lightBlueSev rounded-1xl items-center transition-all ease-in-out duration-300 hover:opacity-90"
                             >
                               More About Audience Targeting
                               <svg
@@ -365,24 +377,24 @@
                           <div class="flex flex-col gap-10">
                             <div class="flex flex-col gap-4">
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Provide your video, audio, and display creative
                               </p>
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Determine your preferred budget and flight dates
                               </p>
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Your campaign will run on best-in-class
                                 Connected TV and Audio streaming services
                               </p>
                             </div>
                             <button
-                              class="text-base font-bold uppercase leading-normal text-[#FCFCFC] h-[52px] justify-center flex gap-1 bg-[#1E71A3] rounded-1xl items-center w-[271px] transition-all ease-in-out duration-300 hover:opacity-90"
+                              class="text-base font-bold uppercase leading-normal text-coolWhite h-[52px] justify-center flex gap-1 bg-lightBlueSev rounded-1xl items-center w-[271px] transition-all ease-in-out duration-300 hover:opacity-90"
                             >
                               Creative Guidelines
                               <svg
@@ -424,27 +436,27 @@
                           <div class="flex flex-col gap-10">
                             <div class="flex flex-col gap-4">
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Track dealership walk-ins, marketshare, VDP
                                 views, and more—all deterministic, not
                                 probabilistic
                               </p>
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Get precise, actionable data that can be used
                                 for campaign optimization
                               </p>
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Location data is provided by the same company
                                 used by Apple, Uber, and Amazon
                               </p>
                             </div>
                             <button
-                              class="text-base font-bold uppercase leading-normal text-[#FCFCFC] h-[52px] justify-center flex gap-1 bg-[#1E71A3] rounded-1xl items-center transition-all ease-in-out duration-300 hover:opacity-90"
+                              class="text-base font-bold uppercase leading-normal text-coolWhite h-[52px] justify-center flex gap-1 bg-lightBlueSev rounded-1xl items-center transition-all ease-in-out duration-300 hover:opacity-90"
                             >
                               lear more about measurement
                               <svg
@@ -478,26 +490,26 @@
                           <div class="flex flex-col gap-10">
                             <div class="flex flex-col gap-4">
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Understand the impact of your campaign with EMG
                                 Auto Analytics featuring GMS iQ
                               </p>
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Compliant placement reports for Co-op
                                 reimbursement
                               </p>
                               <p
-                                class="text-base text-[#212529] font-normal leading-6"
+                                class="text-base text-gray-800 font-normal leading-6"
                               >
                                 Integrate with our reporting stack built upon
                                 Snowflake to power your internal dashboards
                               </p>
                             </div>
                             <button
-                              class="text-base font-bold uppercase leading-normal text-[#FCFCFC] h-[52px] justify-center flex gap-1 bg-[#1E71A3] rounded-1xl items-center w-[271px] transition-all ease-in-out duration-300 hover:opacity-90"
+                              class="text-base font-bold uppercase leading-normal text-coolWhite h-[52px] justify-center flex gap-1 bg-lightBlueSev rounded-1xl items-center w-[271px] transition-all ease-in-out duration-300 hover:opacity-90"
                             >
                               DEEP DIVE INTO REPORTING
                               <svg
@@ -529,25 +541,25 @@
             </div>
             <div class="w-full max-w-[1440px] mx-auto">
               <div class="ml-auto flex gap-9">
-                <div class="flex flex-col w-full gap-[14px] pl-[120px]">
-                  <div class="flex gap-[14px] items-center">
-                    <hr class="border border-[#1E71A3] w-8 h-px" />
-                    <p class="text-lg font-semibold text-[#1E71A3]">Channels</p>
+                <div class="flex flex-col w-full gap-3.5 pl-[120px]">
+                  <div class="flex gap-3.5 items-center">
+                    <hr class="border border-borderBlue w-8 h-px" />
+                    <p class="text-lg font-semibold text-lightBlue">Channels</p>
                   </div>
                   <div class="flex flex-col gap-8 w-[579px]">
-                    <p class="text-black text-[38px] font-bold leading-normal">
+                    <p class="text-black text-38 font-bold leading-normal">
                       Audi Fletcher Jones Sees Dealership Walk-Ins Jump 20%
                       Following Streaming Campaign Leveraging Evolution Media's
                       Automotive Industry Solution
                     </p>
                     <div class="flex flex-col gap-12">
-                      <p class="text-[#212529] text-base font-normal leading-6">
+                      <p class="text-gray-800 text-base font-normal leading-6">
                         Audi Fletcher Jones, the #1 Audi store in Orange County,
                         California, grew awareness of their dealership by
                         reaching consumers in...
                       </p>
                       <button
-                        class="bg-[#1E71A3] text-base font-bold leading-normal items-center text-[#FCFCFC] rounded-1xl py-5 px-8 w-full max-w-[167px] h-[52px] flex gap-1 transition-all ease-in-out duration-300 hover:opacity-90"
+                        class="bg-lightBlueSev text-base font-bold leading-normal items-center text-coolWhite rounded-1xl py-5 px-8 w-full max-w-[167px] h-[52px] flex gap-1 transition-all ease-in-out duration-300 hover:opacity-90"
                       >
                         SEE HOW
                         <svg
@@ -576,12 +588,15 @@
             </div>
           </div>
           <div
-            class="py-[42px] bg-[#F2F7FA] flex justify-center first-container"
+            class="py-[42px] bg-blueGray flex justify-center first-container"
           >
             <div class="flex flex-col gap-[55px] second-container">
               <div class="flex items-center gap-[125px]">
                 <div class="flex flex-col gap-8">
-                  <img class="h-12 w-[118px]" src="./images/footer-logo.png" />
+                  <img
+                    class="h-12 w-full max-w-[118px]"
+                    src="./images/footer-logo.png"
+                  />
                   <div class="flex flex-col w-full max-w-[163px] gap-6">
                     <p
                       class="text-neutral-800 text-lg leading-normal font-medium"
@@ -591,12 +606,12 @@
                     <nav>
                       <ul class="flex flex-col gap-6">
                         <li
-                          class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Phone: (949) 669-5724
                         </li>
                         <li
-                          class="cursor-pointer w-[163px] text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="cursor-pointer w-full max-w-[163px] text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Address: 400 Spectrum Center Dr Suite <br />19-199,
                           Irvine, CA 92618
@@ -624,7 +639,7 @@
                   </div>
                 </div>
 
-                <div class="flex gap-[90px] mt-16">
+                <div class="flex gap-90 w-full max-w-[624px] mt-16">
                   <div class="flex flex-col gap-6 w-full max-w-[114px]">
                     <p
                       class="text-neutral-800 text-lg leading-normal font-medium"
@@ -634,22 +649,22 @@
                     <nav>
                       <ul class="flex flex-col gap-6">
                         <li
-                          class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Planing
                         </li>
                         <li
-                          class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Audience
                         </li>
                         <li
-                          class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Measurement
                         </li>
                         <li
-                          class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Reporting
                         </li>
@@ -665,12 +680,12 @@
                     <nav>
                       <ul class="flex flex-col gap-6">
                         <li
-                          class="text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           <a href="./ctv.html"> CTV </a>
                         </li>
                         <li
-                          class="text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           <a href="./audio.html"> Audio </a>
                         </li>
@@ -686,17 +701,17 @@
                     <nav>
                       <ul class="flex flex-col gap-6">
                         <li
-                          class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Case Studies
                         </li>
                         <li
-                          class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Creative Hub
                         </li>
                         <li
-                          class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Gloassary
                         </li>
@@ -712,17 +727,17 @@
                     <nav>
                       <ul class="flex flex-col gap-6">
                         <li
-                          class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           About
                         </li>
                         <li
-                          class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Partners
                         </li>
                         <li
-                          class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                          class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                         >
                           Careers
                         </li>
@@ -739,12 +754,12 @@
                   </p>
                   <div class="flex gap-8 items-center">
                     <p
-                      class="cursor-pointer text-[#465364] text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                      class="cursor-pointer text-blueGray text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                     >
                       Creative Specifications
                     </p>
                     <p
-                      class="cursor-pointer text-[#465364] text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                      class="cursor-pointer text-blueGray text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                     >
                       Privacy Policy
                     </p>

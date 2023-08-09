@@ -11,6 +11,40 @@
             borderRadius: {
               "1xl": "14px",
             },
+            textColor: {
+              coolWhite: "#FCFCFC",
+              lightBlue: "#1E71A3",
+              blueGray: "#465364",
+            },
+            borderColor: {
+              borderBlue: "#1E71A3",
+            },
+            fontSize: {
+              "4.5xl": "42px",
+              38: "38px",
+            },
+            gap: {
+              42: "42px",
+              70: "70px",
+              90: "90px",
+              100: "100px",
+            },
+            lineHeight: {
+              30: "30px",
+              72: "72px",
+              137: "137.5%",
+            },
+            letterSpacing: {
+              0.84: "-0.84px",
+            },
+            backgroundColor: {
+              bgLightBlue: "#1770A4",
+              blueGray: "#F2F7FA",
+              lightBlueSev: "#1E71A3",
+            },
+            padding: {
+              18: "18px",
+            },
           },
         },
       };
@@ -23,7 +57,7 @@
     <div class="first-container mx-auto">
       <div class="flex flex-col gap-[75px] justify-center items-center">
         <div
-          class="flex justify-between items-center w-full max-w-[1200px] py-[38.8px]"
+          class="flex justify-between items-center second-container py-[38.8px]"
         >
           <div class="cursor-pointer">
             <a href="./index.html">
@@ -68,7 +102,7 @@
               Contact Us
             </p>
             <button
-              class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
+              class="uppercase primary-button text-coolWhite leading-normal items-center text-base font-semibold flex"
             >
               Get Started
               <svg
@@ -93,26 +127,26 @@
           <div
             class="first-container flex flex-col items-center gap-24 justify-center"
           >
-            <div class="flex flex-col gap-[42px] items-center">
+            <div class="flex flex-col gap-42 items-center">
               <p
                 class="text-black text-[80px] leading-[80px] text-center font-bold w-full max-w-[952px]"
               >
                 Streaming advertising that sells
-                <span class="border-b-4 border-[#1E71A3]"> more </span>cars
-                <span class="text-[#1E71A3] rounded-full -ml-4"> . </span>
+                <span class="border-b-4 border-borderBlue"> more </span>cars
+                <span class="text-lightBlue rounded-full -ml-4"> . </span>
               </p>
               <div
                 class="flex flex-col items-center text-white text-base font-semibold gap-8"
               >
                 <p
-                  class="text-neutral-600 text-base font-normal leading-6 text-center w-[952px]"
+                  class="text-neutral-600 text-base font-normal leading-6 text-center w-full max-w-[952px]"
                 >
                   Maximize the impact of your advertising budget with Connected
                   TV and Streaming Audio campaigns and measure the results with
                   absolute confidence.
                 </p>
                 <button
-                  class="bg-[#1E71A3] h-[52px] rounded-1xl py-5 px-8 flex gap-1 items-center transition-all ease-in-out duration-300 hover:opacity-90"
+                  class="bg-lightBlueSev h-[52px] rounded-1xl py-5 px-8 flex gap-1 items-center transition-all ease-in-out duration-300 hover:opacity-90"
                 >
                   Learn More
                   <svg
@@ -162,14 +196,14 @@
               class="first-container flex justify-center items-center set-bg"
             >
               <div class="flex flex-col gap-8">
-                <div class="flex flex-col gap-[14px]">
-                  <div class="flex gap-[14px] items-center">
-                    <hr class="border border-[#1E71A3] w-8 h-px" />
-                    <p class="text-lg font-semibold text-[#1E71A3]">
+                <div class="flex flex-col gap-3.5">
+                  <div class="flex gap-3.5 items-center">
+                    <hr class="border border-borderBlue w-8 h-px" />
+                    <p class="text-lg font-semibold text-lightBlue">
                       Measurement
                     </p>
                   </div>
-                  <p class="text-black text-[38px] font-bold w-[800px]">
+                  <p class="text-black text-38 font-bold w-full max-w-[800px]">
                     EMG Measure Walk-Ins To Your Dealership And Your Competitors
                   </p>
                 </div>
@@ -195,7 +229,7 @@
                         counts.
                       </p>
                       <button
-                        class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
+                        class="uppercase primary-button text-coolWhite leading-normal items-center text-base font-semibold flex"
                       >
                         Get Started
                         <svg
@@ -217,8 +251,6 @@
                     </div>
                   </div>
                   <div class="relative flex justify-center">
-                    <!-- onmouseenter="hoverImagePause()"
-                    onmouseleave="leaveContainerVideo()" -->
                     <div class="video-container">
                       <img src="./images/tv-image.png" />
                       <video
@@ -231,46 +263,34 @@
                         <source src="./video/video.mp4" type="video/ogg" />
                         Video is Loading...
                       </video>
-                      <!--<div class="button-classes">
-                        <button
-                          class="absolute w-12 h-12"
-                          onclick="togglePlayPause()"
-                        >
-                          <img
-                            id="hidden-play-button"
-                            src="./images/player_icon.png"
-                          />
-                          <img id="play-pause-icon" />
-                        </button>
-                      </div> -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="flex flex-col gap-[100px]">
+            <div class="flex flex-col gap-100">
               <div
-                class="bg-section second-container p-10 rounded-3xl flex gap-[90px] justify-center"
+                class="bg-section second-container p-10 rounded-3xl flex gap-90 justify-center"
               >
                 <div class="text-center w-full max-w-[236px]">
                   <p
                     id="number-progress-one"
-                    class="text-[#FCFCFC] text-[42px] font-medium leading-[72px] tracking-[-0.84px]"
+                    class="text-coolWhite text-4.5xl font-medium leading-72 tracking-0.84"
                   ></p>
                   <p
                     id="newcontainer"
-                    class="text-[#FCFCFC] text-[42px] font-medium leading-[72px] tracking-[-0.84px]"
+                    class="text-coolWhite text-4.5xl font-medium leading-72 tracking-0.84"
                   ></p>
-                  <p class="font-medium leading-[30px] text-[#FCFCFC] text-2xl">
+                  <p class="font-medium leading-30 text-coolWhite text-2xl">
                     Tracked Dealerships Walk-ins
                   </p>
                 </div>
                 <div class="text-center w-full max-w-[305px]">
                   <p
                     id="number-progress-two"
-                    class="text-[#FCFCFC] text-[42px] font-medium leading-[72px] tracking-[-0.84px]"
+                    class="text-coolWhite text-4.5xl font-medium leading-72 tracking-0.84"
                   ></p>
-                  <p class="font-medium leading-[30px] text-[#FCFCFC] text-2xl">
+                  <p class="font-medium leading-30 text-coolWhite text-2xl">
                     Auto-Intender Households Reached
                   </p>
                 </div>
@@ -278,36 +298,38 @@
                 <div class="text-center w-full max-w-[273px]">
                   <p
                     id="number-progress-three"
-                    class="text-[#FCFCFC] text-[42px] font-medium leading-[72px] tracking-[-0.84px]"
+                    class="text-coolWhite text-4.5xl font-medium leading-72 tracking-0.84"
                   ></p>
-                  <p class="font-medium leading-[30px] text-[#FCFCFC] text-2xl">
+                  <p class="font-medium leading-30 text-coolWhite text-2xl">
                     Tier 2 and 3 Campaings Managed
                   </p>
                 </div>
               </div>
               <div class="flex flex-col gap-[150px]">
                 <div class="flex flex-col second-container gap-8">
-                  <div class="flex flex-col gap-[14px]">
-                    <div class="flex gap-[14px] items-center">
-                      <hr class="border border-[#1E71A3] w-8 h-px" />
-                      <p class="text-lg font-semibold text-[#1E71A3]">
+                  <div class="flex flex-col gap-3.5">
+                    <div class="flex gap-3.5 items-center">
+                      <hr class="border border-borderBlue w-8 h-px" />
+                      <p class="text-lg font-semibold text-lightBlue">
                         How It Works
                       </p>
                     </div>
-                    <p class="text-black text-[38px] font-semibold w-[800px]">
+                    <p
+                      class="text-black text-38 font-semibold w-full max-w-[800px]"
+                    >
                       EMG is making streaming advertising impactful for
                       Automotive Marketers
                     </p>
                   </div>
                   <div class="flex flex-col gap-[54px]">
                     <div class="flex flex-col gap-6 w-full max-w-[483px]">
-                      <p class="text-base text-[#212529] font-medium leading-6">
+                      <p class="text-base text-gray-800 font-medium leading-6">
                         Learn how to increase dealership walk-ins and website
                         visits using our end-to-end solution built for the
                         automotive industry
                       </p>
                       <button
-                        class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
+                        class="uppercase primary-button text-coolWhite leading-normal items-center text-base font-semibold flex"
                       >
                         Get Started
                         <svg
@@ -329,11 +351,11 @@
                     </div>
                     <div>
                       <div
-                        class="bg-[#1770A4] second-container h-[267px] relative rounded-[32px]"
+                        class="bg-bgLightBlue second-container h-[267px] relative rounded-[32px]"
                       >
                         <div class="absolute -top-[280px] right-0">
                           <img
-                            class="h-[552px] w-[815px]"
+                            class="h-[552px] w-full max-w-[815px]"
                             src="./images/desktop-mobile-image.png"
                           />
                         </div>
@@ -342,23 +364,23 @@
                   </div>
                 </div>
                 <div
-                  class="bg-[#F2F7FA] first-container flex justify-center py-[60px]"
+                  class="bg-blueGray first-container flex justify-center py-[60px]"
                 >
                   <div class="flex flex-col gap-8">
-                    <p class="text-black text-[38px] font-bold leading-normal">
+                    <p class="text-black text-38 font-bold leading-normal">
                       Recent highlights
                     </p>
                     <div class="flex gap-[30px]">
                       <div
-                        class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                        class="bg-bgLightBlue py-8 px-18 rounded-1xl w-full max-w-[278px] flex flex-col gap-9"
                       >
                         <p class="text-white font-semibold text-xl">
                           Cash App Pay available in US
                         </p>
-                        <div class="flex flex-col gap-[70px]">
+                        <div class="flex flex-col gap-70">
                           <div class="flex flex-col gap-2">
                             <p
-                              class="text-sm text-[#FCFCFC] font-light leading-5"
+                              class="text-sm text-coolWhite font-light leading-5"
                             >
                               Jun 7 • 2023
                             </p>
@@ -397,15 +419,15 @@
                         </div>
                       </div>
                       <div
-                        class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                        class="bg-bgLightBlue py-8 px-18 rounded-1xl w-full max-w-[278px] flex flex-col gap-9"
                       >
                         <p class="text-white font-semibold text-xl">
                           Introducing Stripe Reader S700
                         </p>
-                        <div class="flex flex-col gap-[70px]">
+                        <div class="flex flex-col gap-70">
                           <div class="flex flex-col gap-2">
                             <p
-                              class="text-sm text-[#FCFCFC] font-light leading-5"
+                              class="text-sm text-coolWhite font-light leading-5"
                             >
                               May 2 • 2023
                             </p>
@@ -444,17 +466,17 @@
                         </div>
                       </div>
                       <div
-                        class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                        class="bg-bgLightBlue py-8 px-18 rounded-1xl w-full max-w-[278px] flex flex-col gap-9"
                       >
                         <p
                           class="text-white font-semibold text-xl min-h-[63px] truncate"
                         >
                           2024 Honda CR-V Adds $37,645 Hybrid-Only Sport-L
                         </p>
-                        <div class="flex flex-col gap-[70px]">
+                        <div class="flex flex-col gap-70">
                           <div class="flex flex-col gap-2">
                             <p
-                              class="text-sm text-[#FCFCFC] font-light leading-5"
+                              class="text-sm text-coolWhite font-light leading-5"
                             >
                               Jun 7 • 2023
                             </p>
@@ -493,17 +515,17 @@
                         </div>
                       </div>
                       <div
-                        class="bg-[#1770A4] py-8 px-[18px] rounded-1xl w-[278px] flex flex-col gap-9"
+                        class="bg-bgLightBlue py-8 px-18 rounded-1xl w-full max-w-[278px] flex flex-col gap-9"
                       >
                         <p
                           class="text-white font-semibold text-xl min-h-[63px] truncate"
                         >
                           1963 Chevy Impala Z11 Lightweight Is Our BaT Pick
                         </p>
-                        <div class="flex flex-col gap-[70px]">
+                        <div class="flex flex-col gap-70">
                           <div class="flex flex-col gap-2">
                             <p
-                              class="text-sm text-[#FCFCFC] font-light leading-5"
+                              class="text-sm text-coolWhite font-light leading-5"
                             >
                               Jun 7 • 2023
                             </p>
@@ -549,18 +571,18 @@
             <div
               class="flex flex-col gap-8 second-container items-center text-center"
             >
-              <p class="text-black text-[38px] font-bold leadign-normal">
+              <p class="text-black text-38 font-bold leading-normal">
                 Ready to Get Started?
               </p>
-              <div class="flex flex-col items-center gap-[42px]">
+              <div class="flex flex-col items-center gap-42">
                 <p
-                  class="text-[#212529] text-base font-normal leading-6 w-[675px]"
+                  class="text-gray-800 text-base font-normal leading-6 w-full max-w-[675px]"
                 >
                   Drive better performance for your streaming campaigns with our
                   comprehensive solution.
                 </p>
                 <button
-                  class="uppercase primary-button text-[#FCFCFC] leading-normal items-center text-base font-semibold flex"
+                  class="uppercase primary-button text-coolWhite leading-normal items-center text-base font-semibold flex"
                 >
                   Get Started
                   <svg
@@ -582,13 +604,13 @@
               </div>
             </div>
             <div
-              class="py-[42px] bg-[#F2F7FA] flex justify-center first-container"
+              class="py-[42px] bg-blueGray flex justify-center first-container"
             >
               <div class="flex flex-col gap-[55px] second-container">
                 <div class="flex items-center gap-[125px]">
                   <div class="flex flex-col gap-8">
                     <img
-                      class="h-12 w-[118px]"
+                      class="h-12 w-full max-w-[118px]"
                       src="./images/footer-logo.png"
                     />
                     <div class="flex flex-col w-full max-w-[163px] gap-6">
@@ -600,12 +622,12 @@
                       <nav>
                         <ul class="flex flex-col gap-6">
                           <li
-                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Phone: (949) 669-5724
                           </li>
                           <li
-                            class="cursor-pointer w-[163px] text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="cursor-pointer w-full max-w-[163px] text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Address: 400 Spectrum Center Dr Suite <br />19-199,
                             Irvine, CA 92618
@@ -633,7 +655,7 @@
                     </div>
                   </div>
 
-                  <div class="flex gap-[90px] mt-16">
+                  <div class="flex gap-90 w-full max-w-[624px] mt-16">
                     <div class="flex flex-col gap-6 w-full max-w-[114px]">
                       <p
                         class="text-neutral-800 text-lg leading-normal font-medium"
@@ -643,22 +665,22 @@
                       <nav>
                         <ul class="flex flex-col gap-6">
                           <li
-                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Planing
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Audience
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Measurement
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Reporting
                           </li>
@@ -674,12 +696,12 @@
                       <nav>
                         <ul class="flex flex-col gap-6">
                           <li
-                            class="text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             <a href="./ctv.html"> CTV </a>
                           </li>
                           <li
-                            class="text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             <a href="./audio.html"> Audio </a>
                           </li>
@@ -695,17 +717,17 @@
                       <nav>
                         <ul class="flex flex-col gap-6">
                           <li
-                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Case Studies
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Creative Hub
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Gloassary
                           </li>
@@ -721,17 +743,17 @@
                       <nav>
                         <ul class="flex flex-col gap-6">
                           <li
-                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="cursor-pointer text-neutral-600 text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             About
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Partners
                           </li>
                           <li
-                            class="w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-[137.5%] opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                            class="w-full max-w-[163px] text-neutral-600 cursor-pointer text-sm font-normal leading-137 opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                           >
                             Careers
                           </li>
@@ -748,12 +770,12 @@
                     </p>
                     <div class="flex gap-8 items-center">
                       <p
-                        class="cursor-pointer text-[#465364] text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                        class="cursor-pointer text-blueGray text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                       >
                         Creative Specifications
                       </p>
                       <p
-                        class="cursor-pointer text-[#465364] text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
+                        class="cursor-pointer text-blueGray text-xs font-normal opacity-100 hover:opacity-70 transition-all ease-in-out duration-300"
                       >
                         Privacy Policy
                       </p>
