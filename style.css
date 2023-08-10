@@ -127,3 +127,27 @@ body {
   background-position: top right, bottom left, bottom right;
   background-repeat: no-repeat;
 }
+.Tabs__tab:first-child.Tabs__presentation-slider {
+	transform: translateX(0) scaleX(0.333);
+  color: #64748B
+}
+.Tabs__tab:first-child.active ~ .Tabs__presentation-slider {
+	transform: translateX(0) scaleX(0.333);
+  color: #262626
+}
+
+.Tabs__tab:nth-child(2).active ~ .Tabs__presentation-slider {
+	transform: translateX(33.333%) scaleX(0.333);
+  left: 24px;
+	width: 640px;
+}
+.Tabs__presentation-slider {
+	position: absolute;
+  left: 0;
+  top: 55px;
+	width: 612px;
+	height: 2px;
+	background-color: #14B8A6;
+	transform-origin: 0 0;
+	transition: transform .25s;
+}
