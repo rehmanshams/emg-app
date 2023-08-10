@@ -44,7 +44,8 @@ body {
 }
 .channel-section-bg {
   background-color: #f2f7fa;
-  background-image: url(./images/channelpage-bgone.png), url(./images/channelpage-bgtwo.png);
+  background-image: url(./images/channelpage-bgone.png),
+    url(./images/channelpage-bgtwo.png);
   background-repeat: no-repeat;
   height: 1202px;
   width: 100%;
@@ -96,8 +97,10 @@ body {
   width: 100%;
 }
 .howitworks-bg {
-  background-position: right bottom , top 513px right , left center;
-  background-image: url(./images/howitworks-image-three.png), url(./images/howitworks-image-one.png) , url(./images/howitworks-image-two.png);
+  background-position: right bottom, top 513px right, left center;
+  background-image: url(./images/howitworks-image-three.png),
+    url(./images/howitworks-image-one.png),
+    url(./images/howitworks-image-two.png);
   background-color: #f2f7fa;
   background-repeat: no-repeat;
   width: 100%;
@@ -116,4 +119,11 @@ body {
   top: 190px;
   width: 670px;
   right: 15px;
+}
+.adv2-bg {
+  background-image: url(./images/Adv2-topvector-image.png),
+    url(./images/Adv2-buttomleftvector-image.png),
+    url(./images/Adv2-buttomrightvector-image.png);
+  background-position: top right, bottom left, bottom right;
+  background-repeat: no-repeat;
 }
