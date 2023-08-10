@@ -90,7 +90,7 @@ let initialLoadValueAudioCunsumeSupport = true;
 
 // const showInHtml = faqData.map((item) => {
 //   return `
-//   <div class="flex flex-col gap-8 border-b border-[#DCE6FF] pb-6">
+//   <div class="flex flex-col gap-8 border-b border-indigo-100 pb-6">
 //   <div
 //     onclick="togglefun(${item.id})"
 //     class="cursor-pointer flex justify-between"
