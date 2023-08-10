@@ -5,16 +5,15 @@
 body {
   font-family: "Inter", sans-serif;
   background-color: #fcfcfc;
-  /* padding-bottom: 100px; */
 }
 .first-container {
   width: 100%;
-  /* max-width: 1440px; */
   margin-left: auto;
   margin-right: auto;
 }
 .second-container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -36,15 +35,11 @@ body {
   transition-duration: 300ms;
 }
 .set-bg {
-  /* right: 0; */
   background-color: #f2f7fa;
   background-image: url(./images/index-buttom-section-bg.png);
   background-repeat: no-repeat;
   background-position: right;
   width: 100%;
-  /*
-  background-size: cover;
-  max-width: 1440px; */
   height: 820px;
 }
 .channel-section-bg {
