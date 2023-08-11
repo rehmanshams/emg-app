@@ -85,7 +85,7 @@
                 >
                   <a href="./channels.html"> Channels </a>
                 </li>
-         <a href="./resources.html">
+                <a href="./resources.html">
                   <li
                     class="cursor-pointer opacity-100 hover:opacity-60 transition-all ease-in-out duration-300"
                   >
@@ -180,23 +180,33 @@
                 <div class="w-full max-w-[193px]">
                   <div class="flex flex-col gap-3 menu">
                     <p
-                      data-target="one"
+                      onclick="toggleTableContents()"
+                      id="selectTableContents"
+                      data-target="tableContents"
                       class="text-lightBlue text-base font-bold leading-6 cursor-pointer"
                     >
                       TABLE OF CONTENTS
                     </p>
                     <p
-                      data-target="two"
+                      onclick="toggleObjective()"
+                      id="selectObjective"
+                      data-target="objective"
                       class="text-zinc-600 text-base font-medium leading-6 cursor-pointer"
                     >
                       Objective
                     </p>
                     <p
+                      onclick="toggleSolution()"
+                      id="selectSolution"
+                      data-target="solution"
                       class="text-zinc-600 text-base font-medium leading-6 cursor-pointer"
                     >
                       Solution
                     </p>
                     <p
+                      onclick="toggleResults()"
+                      id="selectResults"
+                      data-target="results"
                       class="text-zinc-600 text-base font-medium leading-6 cursor-pointer"
                     >
                       Results
@@ -204,7 +214,7 @@
                   </div>
                 </div>
                 <div class="w-full max-w-[615px] flex flex-col gap-6">
-                  <div id="one" class="flex flex-col gap-6">
+                  <div id="tableContents" class="flex flex-col gap-6">
                     <p class="text-neutral-600 text-base leading-6 font-normal">
                       Audi Fletcher Jones, the #1 Audi store in Orange County,
                       California, grew awareness of their dealership by reaching
@@ -252,7 +262,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="flex flex-col gap-3">
+                  <div id="objective" class="flex flex-col gap-3">
                     <p class="text-black text-xl leading-30 font-bold">
                       Objective
                     </p>
@@ -273,7 +283,7 @@
                       Digital Audio.
                     </p>
                   </div>
-                  <div class="flex flex-col gap-3">
+                  <div id="solution" class="flex flex-col gap-3">
                     <p class="text-black text-xl leading-30 font-bold">
                       Solution
                     </p>
@@ -313,7 +323,7 @@
                       6AM and midnight, with no overnight delivery.
                     </p>
                   </div>
-                  <div id="two" class="flex flex-col gap-3">
+                  <div id="results" class="flex flex-col gap-3">
                     <p class="text-black text-xl leading-30 font-bold">
                       The Results
                     </p>
@@ -582,5 +592,6 @@
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>

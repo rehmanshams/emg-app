@@ -1021,20 +1021,59 @@ function showIndustryCardData() {
   document.getElementById("industryCardData").style.display = "flex";
 }
 
-
 var menuItems = document.querySelectorAll(".menu [data-target]");
 
-menuItems.forEach(function(item) {
-    item.addEventListener("click", function(e) {
-        e.preventDefault();
+menuItems.forEach(function (item) {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
 
-        var targetId = this.getAttribute("data-target");
-        var target = document.getElementById(targetId);
-        var position = target.offsetTop;
+    var targetId = this.getAttribute("data-target");
+    var target = document.getElementById(targetId);
+    var position = target.offsetTop;
 
-        window.scrollTo({
-            top: position,
-            behavior: "smooth"
-        });
+    window.scrollTo({
+      top: position,
+      behavior: "smooth",
     });
+  });
 });
+function toggleTableContents() {
+  document.getElementById("selectTableContents").style.color = "#1E71A3";
+  document.getElementById("selectTableContents").style.fontWeight = "700";
+  document.getElementById("selectObjective").style.color = "#52525B";
+  document.getElementById("selectObjective").style.fontWeight = "500";
+  document.getElementById("selectSolution").style.color = "#52525B";
+  document.getElementById("selectSolution").style.fontWeight = "500";
+  document.getElementById("selectResults").style.fontWeight = "500";
+  document.getElementById("selectResults").style.color = "#52525B";
+}
+function toggleObjective() {
+  document.getElementById("selectSolution").style.color = "#52525B";
+  document.getElementById("selectSolution").style.fontWeight = "500";
+  document.getElementById("selectTableContents").style.color = "#52525B";
+  document.getElementById("selectTableContents").style.fontWeight = "500";
+  document.getElementById("selectObjective").style.color = "#1E71A3";
+  document.getElementById("selectObjective").style.fontWeight = "700";
+  document.getElementById("selectResults").style.fontWeight = "500";
+  document.getElementById("selectResults").style.color = "#52525B";
+}
+function toggleSolution() {
+  document.getElementById("selectSolution").style.fontWeight = "700";
+  document.getElementById("selectSolution").style.color = "#1E71A3";
+  document.getElementById("selectTableContents").style.color = "#52525B";
+  document.getElementById("selectTableContents").style.fontWeight = "500";
+  document.getElementById("selectObjective").style.fontWeight = "500";
+  document.getElementById("selectObjective").style.color = "#52525B";
+  document.getElementById("selectResults").style.fontWeight = "500";
+  document.getElementById("selectResults").style.color = "#52525B";
+}
+function toggleResults() {
+  document.getElementById("selectResults").style.fontWeight = "700";
+  document.getElementById("selectResults").style.color = "#1E71A3";
+  document.getElementById("selectSolution").style.fontWeight = "500";
+  document.getElementById("selectSolution").style.color = "#52525B";
+  document.getElementById("selectTableContents").style.color = "#52525B";
+  document.getElementById("selectTableContents").style.fontWeight = "500";
+  document.getElementById("selectObjective").style.fontWeight = "500";
+  document.getElementById("selectObjective").style.color = "#52525B";
+}
