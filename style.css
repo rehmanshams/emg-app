@@ -28,6 +28,15 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
+.primary-button-header {
+  background-color: #00c49c;
+  border-radius: 8px;
+  padding: 20px 32px 20px 32px;
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
 .primary-button:hover {
   opacity: 80%;
   transition-property: all;
@@ -128,26 +137,34 @@ body {
   background-repeat: no-repeat;
 }
 .Tabs__tab:first-child.Tabs__presentation-slider {
-	transform: translateX(0) scaleX(0.333);
-  color: #64748B
+  transform: translateX(0) scaleX(0.333);
 }
 .Tabs__tab:first-child.active ~ .Tabs__presentation-slider {
-	transform: translateX(0) scaleX(0.333);
-  color: #262626
+  transform: translateX(0) scaleX(0.333);
 }
 
 .Tabs__tab:nth-child(2).active ~ .Tabs__presentation-slider {
-	transform: translateX(33.333%) scaleX(0.333);
-  left: 24px;
-	width: 640px;
+  transform: translateX(33.333%) scaleX(0.333);
+  left: 21px;
+  width: 648px;
 }
 .Tabs__presentation-slider {
-	position: absolute;
+  position: absolute;
   left: 0;
   top: 55px;
-	width: 612px;
-	height: 2px;
-	background-color: #14B8A6;
-	transform-origin: 0 0;
-	transition: transform .25s;
+  width: 612px;
+  height: 2px;
+  background-color: #14b8a6;
+  transform-origin: 0 0;
+  transition: transform 0.25s;
+}
+.resource-started-bg {
+  background-image: url(./images/resourse-bottomtwo-sec-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 24px;
+}
+.resource-common-bg {
+  border-radius: 24px;
+  background: linear-gradient(180deg, #f0faf8 0%, #d9fcf8 100%);
 }

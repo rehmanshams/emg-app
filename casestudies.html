@@ -196,24 +196,29 @@
                     </div>
                   </div>
                   <div class="flex flex-col gap-7">
-                    <div class="relative border-y border-slate-200 py-4 pl-2 flex gap-8">
+                    <div
+                      class="relative border-y border-slate-200 py-4 pl-2 flex gap-8"
+                    >
                       <p
-                        onclick=""
-                        class="  Tabs__tab active Tab cursor-pointer font-semibold text-base leading-norma"
+                        onclick="showAutoMotiveCardData()"
+                        id="automotiveCaseStudies"
+                        class="Tabs__tab active Tab text-neutral-800 cursor-pointer font-semibold text-base leading-norma"
                       >
                         Automotive Case Studies
                       </p>
                       <p
-                        class="text-slate-500 Tabs__tab active Tab font-semibold cursor-pointer text-base leading-norma"
+                      onclick="showIndustryCardData()"
+                      id="industryCaseStudies"
+                      class="Tabs__tab Tab font-semibold text-slate-500 cursor-pointer text-base leading-norma"
                       >
                       Other Industry Case Studies
-                      </p>
-                      <p
-                        class="Tabs__presentation-slider"
-                        role="presentation"
-                      ></p>
+                    </p>
+                    <p
+                      class="Tabs__presentation-slider"
+                      role="presentation"
+                    ></p>
                     </div>
-                    <div class="flex gap-30">
+                    <div id="automotiveCardData" class="flex gap-30">
                       <div class="flex flex-col gap-8">
                         <div class="flex flex-col gap-4">
                           <div>
@@ -402,6 +407,11 @@
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div id="industryCardData" class="hidden">
+                      <p class="text-2xl text-neutral-800 font-extralight">
+                        NO DATA FOUND IN THE INDUSTRY CASE STUDIES :(
+                      </p>
                     </div>
                   </div>
                 </div>

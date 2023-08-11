@@ -994,16 +994,47 @@ function portViewValueAudioCunsumeSupport() {
 }
 
 window.addEventListener("scroll", portViewValueAudioCunsumeSupport);
-var tabs = document.getElementsByClassName('Tab');
 
-Array.prototype.forEach.call(tabs, function(tab) {
-    tab.addEventListener('click', setActiveClass);
+var tabs = document.getElementsByClassName("Tab");
+Array.prototype.forEach.call(tabs, function (tab) {
+  tab.addEventListener("click", setActiveClass);
 });
 
 function setActiveClass(evt) {
-    Array.prototype.forEach.call(tabs, function(tab) {
-        tab.classList.remove('active');
-    });
-    
-    evt.currentTarget.classList.add('active');
+  Array.prototype.forEach.call(tabs, function (tab) {
+    tab.classList.remove("active");
+  });
+
+  evt.currentTarget.classList.add("active");
 }
+
+function showAutoMotiveCardData() {
+  document.getElementById("automotiveCaseStudies").style.color = "#262626";
+  document.getElementById("industryCaseStudies").style.color = "#64748B";
+  document.getElementById("automotiveCardData").style.display = "flex";
+  document.getElementById("industryCardData").style.display = "none";
+}
+function showIndustryCardData() {
+  document.getElementById("industryCaseStudies").style.color = "#262626";
+  document.getElementById("automotiveCaseStudies").style.color = "#64748B";
+  document.getElementById("automotiveCardData").style.display = "none";
+  document.getElementById("industryCardData").style.display = "flex";
+}
+
+
+var menuItems = document.querySelectorAll(".menu [data-target]");
+
+menuItems.forEach(function(item) {
+    item.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        var targetId = this.getAttribute("data-target");
+        var target = document.getElementById(targetId);
+        var position = target.offsetTop;
+
+        window.scrollTo({
+            top: position,
+            behavior: "smooth"
+        });
+    });
+});
